@@ -1,6 +1,7 @@
 package lesson04.big01.model.service;
 
-import com.javarush.test.level36.lesson04.big01.bean.User;
+
+import lesson04.big01.bean.User;
 
 import java.util.List;
 

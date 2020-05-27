@@ -1,6 +1,7 @@
 package lesson04.big01;
 
-import com.javarush.test.level36.lesson04.big01.bean.User;
+
+import lesson04.big01.bean.User;
 
 public final class Util {
     public static final String DELETED_MARKER = " (deleted)";

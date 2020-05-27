@@ -1,9 +1,9 @@
 package lesson04.big01.controller;
 
-import com.javarush.test.level36.lesson04.big01.model.MainModel;
-import com.javarush.test.level36.lesson04.big01.model.Model;
-import com.javarush.test.level36.lesson04.big01.view.EditUserView;
-import com.javarush.test.level36.lesson04.big01.view.UsersView;
+
+import lesson04.big01.model.Model;
+import lesson04.big01.view.EditUserView;
+import lesson04.big01.view.UsersView;
 
 /**
  * Created by IGOR on 28.01.2016.
