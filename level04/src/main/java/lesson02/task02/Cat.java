@@ -6,7 +6,11 @@ package lesson02.task02;
 
 public class Cat {
 
+
+    static int catsCount = 1;
+
     public static void addNewCat() {
         //add your code here
+        Cat.catsCount++;
     }
 }
