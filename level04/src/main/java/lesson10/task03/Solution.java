@@ -16,10 +16,8 @@ import java.io.Reader;
 абв
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
 
 
