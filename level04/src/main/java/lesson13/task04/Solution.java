@@ -9,10 +9,8 @@ import java.io.InputStreamReader;
 - вертикальную линию из 10 восьмёрок.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
 
 

@@ -9,8 +9,7 @@ package lesson05.task02;
 если cat1.fight(cat2) = true , то cat2.fight(cat1) = false
 */
 
-public class Cat
-{
+public class Cat {
 
     public Cat()
     {
