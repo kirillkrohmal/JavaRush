@@ -12,11 +12,8 @@ import java.io.BufferedReader;
 Я буду зарабатывать $50 в час
 */
 
-public class Solution
-
-{
-    public static void main(String[] args)   throws Exception
-    {
+public class Solution {
+    public static void main(String[] args)   throws Exception {
         //Напишите тут ваш код
         System.out.println("Я буду зарабатывать $n в час");
     }

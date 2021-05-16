@@ -8,8 +8,7 @@ import lesson04.big01.view.EditUserView;
 import lesson04.big01.view.UsersView;
 
 public class Solution {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Model model = new MainModel();
         UsersView usersView = new UsersView();
         EditUserView editUserView = new EditUserView();
