@@ -7,17 +7,17 @@ package lesson07.task01;
 - Имя, возраст, пол
 */
 
-public class Friend
-{
+public class Friend {
     //Напишите тут ваш код
-
-    public void initialize(String name, int age)
-    {
-
-    }
-    public void initialize(String name, int age, String sex)
-    {
+    public void initialize(String name) {
 
     }
 
+    public void initialize(String name, int age) {
+
+    }
+
+    public void initialize(String name, int age, String sex) {
+
+    }
 }

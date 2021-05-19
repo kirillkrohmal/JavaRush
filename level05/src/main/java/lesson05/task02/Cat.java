@@ -10,18 +10,15 @@ package lesson05.task02;
 */
 
 public class Cat {
-
     public Cat()
     {
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
 
     }
 
-    public boolean fight (Cat anotherCat)
-    {
+    public boolean fight (Cat anotherCat) {
         //Напишите тут ваш код
 
     }

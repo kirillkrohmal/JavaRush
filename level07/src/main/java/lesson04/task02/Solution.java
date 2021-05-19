@@ -11,18 +11,18 @@ import java.io.InputStreamReader;
 
 public class Solution
 {
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String[] list = new String[10];
-        for (int i = 0; i < 8; i++)
-        {
-            list[i] = reader.readLine();
+        String [] array = new String[10];
+
+        BufferedReader reader = new BufferedReader (new InputStreamReader (System.in));
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = reader.readLine ();
         }
-        for (int i = 0; i < list.length; i++)
-        {
-            System.out.println(list[10-i-1]);
+
+        for (int i = 0; i < array.length - 1; i++) {
+            System.out.println (array[i]);
         }
     }
 }

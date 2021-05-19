@@ -13,20 +13,18 @@ import java.io.InputStreamReader;
 
 public class Solution
 {
-    public static void main(String[] args) throws Exception
-    {
-        int[] array = initializeArray();
+    public static void main(String[] args) throws Exception {
+        int[] array = initializeArray ();
         int max = max(array);
-        System.out.println(max);
+        System.out.println (max);
     }
     public static int[] initializeArray() throws IOException {
         //initialize(create and fill) an array here - инициализируйте (создайте и заполните) массив тут
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] array = new int[20];
-        for (int i = 0; i < array.length; i++)
-        {
-            String s = reader.readLine();
-            array[i] = Integer.parseInt(s);
+        for (int i = 0; i < array.length; i++) {
+           String s = reader.readLine ();
+           array[i] = Integer.parseInt (s);
         }
         return array;
     }
@@ -34,11 +32,12 @@ public class Solution
     public static int max(int[] array) {
         //find the max value here - найдите максимальное значение в этом методе
         int max = array[0];
-        for (int i = 0; i < array.length; i++)
-        {
+
+        for (int i = 0; i < array.length; i++) {
             if (array[i] > max)
                 max = array[i];
+
         }
-        return max;
+            return max;
     }
 }

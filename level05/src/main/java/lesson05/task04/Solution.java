@@ -10,7 +10,6 @@ public class Solution {
     public static void main(String[] args) {
         //add your code here
 
-
     }
 
     public static class Cat {
