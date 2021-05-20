@@ -13,8 +13,22 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
+        BufferedReader reader = new BufferedReader (new InputStreamReader (System.in));
+        String[] array = new String[10];
+        int[] num = new int[10];
 
+        for (int i = 0; i < array.length; i++) {
 
+            String s = reader.readLine ();
+            array[i] = s;
+        }
 
+        for (int i = 0; i < num.length; i++) {
+            num[i] = array[i].length();
+        }
+
+        for (int i = 0; i < num.length; i++) {
+            System.out.println (num[i]);
+        }
     }
 }

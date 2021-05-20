@@ -17,18 +17,20 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] array = new int[10];
         int[] massiv = new int[10];
-        for (int i = 0; i < array.length; i++)
-        {
-            array[i] = Integer.parseInt(reader.readLine());
+
+        for (int i = 0; i < array.length; i++) {
+            String s = reader.readLine();
+            array[i] = Integer.parseInt (s);
         }
-        for (int i = 0; i < array.length; i++)
-        {
+
+        for (int i = 0; i < array.length; i++) {
+
             massiv[i] = array[9 - i];
         }
-        for (int i = 0; i < array.length; i++)
-        {
+
+        for (int i = 0; i < array.length; i++) {
             array[i] = massiv[i];
-            System.out.println(array[i]);
+            System.out.println (array[i]);
         }
     }
 }
