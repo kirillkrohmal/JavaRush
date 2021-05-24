@@ -16,14 +16,14 @@ public class Solution
         //Напишите тут ваш код
         ArrayList<String>list = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 5; i++)
-        {
+
+        for (int i = 0; i < 5; i++) {
             list.add(reader.readLine());
         }
-        for (int i = 0; i < list.size(); i++)
-        {
-            int j = list.size() - i - 1;
-            System.out.println(list.get(j));
+
+        for (int i = 0; i < list.size (); i++) {
+            int x = list.size() - i - 1;
+            System.out.println(list.get(x));
         }
     }
 }
