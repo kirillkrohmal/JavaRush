@@ -10,10 +10,8 @@ package lesson03.task01;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         Set<String> set = new HashSet<String>();
         set.add("арбуз");
@@ -26,9 +24,9 @@ public class Solution
         set.add("земляника");
         set.add("ирис");
         set.add("картофель");
-        for (String text : set)
-        {
-            System.out.println(text);
+
+        for (String s : set) {
+            System.out.println (s);
         }
     }
 }

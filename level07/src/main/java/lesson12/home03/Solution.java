@@ -17,8 +17,6 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-
-
         //Напишите тут ваш код
         int[] numbers = new int[20];
         for (int i = 0; i < numbers.length; i++)

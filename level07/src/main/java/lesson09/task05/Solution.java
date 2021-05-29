@@ -10,31 +10,34 @@ import java.util.ArrayList;
 3. Используя цикл for выведи результат на экран, каждое значение с новой строки.
 */
 
-public class
-Solution
+public class Solution
 {
     public static void main(String[] args) throws Exception {
         //read strings and init ArrayList list here - считать строки с консоли и объявить ArrayList list тут
-        ArrayList<String>list = new ArrayList<String>();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader (new InputStreamReader (System.in));
+        ArrayList<String> list = new ArrayList<>();
+        
         for (int i = 0; i < 10; i++) {
-            list.add(reader.readLine());
+            list.add (reader.readLine ());
         }
-        ArrayList<String> result = doubleValues(list);
+        ArrayList result = doubleValues (list);
 
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(result.get(i));
+        for (int i = 0; i < result.size (); i++) {
+            System.out.println (result);
         }
         //print result - вывести на экран result
     }
 
     public static ArrayList<String> doubleValues(ArrayList<String> list) {
         // add your code here - добавь код тут
-        for (int i = 0; i < list.size(); )
-        {
-            list.add(i, list.get(i));
-            i += 2;
+        ArrayList<String> list2 = new ArrayList<> ();
+
+        for (int i = 0; i < list.size(); i++) {
+            list2.add (list.get (i));
+            list2.add (list.get (i));
         }
-        return list;
+        return list2;
     }
+
+
 }

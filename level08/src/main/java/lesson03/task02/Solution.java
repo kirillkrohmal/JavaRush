@@ -29,11 +29,8 @@ public class Solution
         map.put("картофель", "клубень");
 
 
-        for (Map.Entry<String, String> pair : map.entrySet())
-        {
-            String key = pair.getKey();
-            String value = pair.getValue();
-            System.out.println(key + " - " + value);
+        for (Map.Entry<String, String> entry : map.entrySet ()) {
+
         }
     }
 }

@@ -20,13 +20,13 @@ public class Solution
 
         //Напишите тут ваш код
         int[] list = new int[10];
-        for (int i = 0; i < list.length; i++)
-        {
-            list[i] = Integer.parseInt(reader.readLine());
+
+        for (int i = 0; i < list.length; i++) {
+            list[i] = Integer.parseInt (reader.readLine());
         }
-        for (int i = 0; i < list.length; i++)
-        {
-            System.out.println(list[10-1-i]);
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println (list[i] - 10 - 1);
         }
     }
 }
