@@ -19,11 +19,11 @@ public class Solution {
         введите -1 и -2, минимум =  -2
          */
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String one1 = bufferedReader.readLine();
-        String two2 = bufferedReader.readLine();
+        String second1 = bufferedReader.readLine();
+        String second2 = bufferedReader.readLine();
 
-        int one = Integer.parseInt(one1);
-        int two = Integer.parseInt(two2);
+        int one = Integer.parseInt(second1);
+        int two = Integer.parseInt(second2);
 
         int x;
 
