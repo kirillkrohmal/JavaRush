@@ -18,14 +18,14 @@ public class Solution {
         введите 1 и 1, минимум =  1
         введите -1 и -2, минимум =  -2
          */
-        BufferedReader reader = new BufferedReader (new InputStreamReader(System.in));
-        String number1 = reader.readLine ();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String one1 = bufferedReader.readLine();
+        String two2 = bufferedReader.readLine();
 
-        int one = Integer.parseInt (number1);
+        int one = Integer.parseInt(one1);
+        int two = Integer.parseInt(two2);
+
         int x;
-        String number2 = reader.readLine();
-
-        int two = Integer.parseInt (number2);
 
         if (one < two) {
             x = one;

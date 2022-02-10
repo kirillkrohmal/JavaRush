@@ -16,7 +16,7 @@ public class Solution
     public static void main(String[] args) throws Exception
     {
         //Напишите тут ваш код
-        ArrayList<String>list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 
