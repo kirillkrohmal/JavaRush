@@ -7,30 +7,24 @@ package lesson12.home01;
 Объекты класса Duck уже созданы и выводятся на экран.
 */
 
-public class Solution
-{
+public class Solution {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
 
 
     }
 
-    public static class Duck
-    {
+    public static class Duck {
 
     }
 
     //Напишите тут ваш код
-    public static class Cat
-    {
+    public static class Cat {
 
     }
 
-    public static class Dog
-    {
+    public static class Dog {
 
     }
-
 }

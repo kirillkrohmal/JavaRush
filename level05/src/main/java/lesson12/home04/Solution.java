@@ -7,10 +7,8 @@ package lesson12.home04;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         //Напишите тут ваш код
         Date d = new Date ();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MM yyyy");

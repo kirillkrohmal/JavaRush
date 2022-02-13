@@ -10,19 +10,47 @@ package lesson05.task02;
 */
 
 public class Cat {
-    public Cat()
-    {
+
+    public String name;
+    public int age;
+    public int weight;
+    public int strength;
+
+    public Cat() {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.strength = strength;
     }
 
     public static void main(String args[]) {
+        Cat cat1 = new Cat();
 
+        cat1.name = "Vasya";
+        cat1.strength = 2;
+        cat1.weight = 4;
+        cat1.age = 8;
+
+        Cat cat2 = new Cat();
+
+        cat2.name = "Nim";
+        cat2.strength = 1;
+        cat2.weight = 5;
+        cat2.age = 10;
+
+        cat1.fight(cat2);
     }
 
-    public boolean fight (Cat anotherCat) {
+    public boolean fight(Cat anotherCat) {
         //Напишите тут ваш код
-
+        if (anotherCat.strength > this.strength) {
+            return true;
+        }
+        else return false;
     }
 }
+
+
 
 
 

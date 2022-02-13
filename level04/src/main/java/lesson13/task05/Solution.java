@@ -13,10 +13,8 @@ import java.io.Reader;
 …
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
 
     }

@@ -9,11 +9,8 @@ package lesson07.task05;
 -	создаём копию другого прямоугольника (он и передаётся в параметрах)
 */
 
-public class Rectangle
-{
+public class Rectangle {
     //Напишите тут ваш код
-
-
     public void initialize (int top, int left, int width, int height)
     {
 
@@ -30,5 +27,4 @@ public class Rectangle
     {
 
     }
-
 }

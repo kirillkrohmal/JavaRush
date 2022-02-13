@@ -7,11 +7,8 @@ package lesson09.task04;
 - centerX, centerY, radius, width, color
 */
 
-public class Circle
-{
+public class Circle {
     //Напишите тут ваш код
-
-
     public Circle (int centerX, int centerY, int radius)
     {
 
@@ -24,5 +21,4 @@ public class Circle
     {
 
     }
-
 }

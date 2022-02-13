@@ -9,38 +9,21 @@ package lesson09.task05;
 -	создаём копию другого прямоугольника (он и передаётся в параметрах)
 */
 
-public class Rectangle
-{
+public class Rectangle {
     //Напишите тут ваш код
     public int rectangletop;
     public int rectangleleft;
     public int rectanglewidth;
     public int rectangleheight;
 
-    public Rectangle (int top, int left, int width, int height)
-    {
-        this.rectangletop = top;
-        this.rectangleleft = left;
-        this.rectanglewidth = width;
-        this.rectangleheight = height;
+    public Rectangle (int top, int left, int width, int height) {
     }
-    public Rectangle (int top, int left)
-    {
-        this.rectangletop = top;
-        this.rectangleleft = left;
+    public Rectangle (int top, int left) {
     }
-    public Rectangle (int top, int left, int width)
-    {
-        this.rectangletop = top;
-        this.rectangleleft = left;
-        this.rectanglewidth = width;
-    }
-    public Rectangle (Rectangle anotherRectangle)
-    {
-        this.rectangletop = anotherRectangle.rectangletop;
-        this.rectangleleft = anotherRectangle.rectangleleft;
-        this.rectanglewidth = anotherRectangle.rectanglewidth;
-        this.rectangleheight = anotherRectangle.rectangleheight;
-    }
+    public Rectangle (int top, int left, int width) {
 
+    }
+    public Rectangle (Rectangle anotherRectangle) {
+
+    }
 }

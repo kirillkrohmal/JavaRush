@@ -13,7 +13,7 @@ package lesson07.task02;
 public class Cat {
     //Напишите тут ваш код
     public void initialize(String name) {
-        this.catname = name;
+
     }
 
     public void initialize(String name, int weight, int age) {

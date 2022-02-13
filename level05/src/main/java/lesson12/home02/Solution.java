@@ -8,21 +8,16 @@ package lesson12.home02;
 5. Объекты выведи на экран в таком формате [name + " " + age + " " + address].
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         // Создай по два объекта каждого класса тут
 
     }
-
     // Напиши тут свои классы
-    public static class Man
-    {
+    public static class Man {
 
     }
-    public static class Woman
-    {
+    public static class Woman {
 
     }
 }

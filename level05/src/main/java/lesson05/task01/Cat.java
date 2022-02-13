@@ -6,13 +6,13 @@ package lesson05.task01;
 
 public class Cat {
 
-    String name = "cat";
-    int age = 15;
-    int weight = 5;
-    int strength = 8;
+    static String name = "cat";
+    static int age = 15;
+    static int weight = 5;
+    static int strength = 8;
 
     //Напишите тут ваш код
     public static void main (String args[]) {
-
+        System.out.println(name + " " + age + " " + weight + " " + strength);
     }
 }

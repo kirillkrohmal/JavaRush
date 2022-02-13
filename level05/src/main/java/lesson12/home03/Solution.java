@@ -6,25 +6,20 @@ package lesson12.home03;
 Mouse jerryMouse = new Mouse(“Jerry”, 12 , 5), где 12 - высота в см, 5 - длина хвоста в см.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 
-    public static class Mouse
-    {
+    public static class Mouse {
 
     }
 
     //Напишите тут ваши классы
-    public static class Dog
-    {
+    public static class Dog {
 
     }
-    public static class Cat
-    {
+    public static class Cat {
 
     }
 }
