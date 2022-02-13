@@ -10,12 +10,6 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
-        int x = 10;
-        int num = 0;
 
-        while (num < x) {
-            num++;
-            System.out.println (num);
-        }
     }
 }

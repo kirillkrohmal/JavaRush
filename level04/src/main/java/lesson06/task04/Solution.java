@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
- class Solutio
+ class Solution
 {
     public static void main(String[] args) throws Exception
     {
