@@ -8,6 +8,12 @@ package lesson10.task04;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
+        int i = 10;
+        int b = 0;
 
+        while (i > b) {
+            System.out.println(" S S S S S S S S S S");
+            b++;
+        }
     }
 }

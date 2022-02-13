@@ -19,7 +19,15 @@ import java.io.Reader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String р = bufferedReader.readLine();
+        String second1 = bufferedReader.readLine();
+        int N = Integer.parseInt(second1);
 
-
+        int i = 0;
+        while(i < N) {
+            System.out.println(р);
+            i++;
+        }
     }
 }

@@ -7,7 +7,12 @@ package lesson10.task02;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
+        int i = 10;
 
+        while(i >= 1) {
+            System.out.println(i);
+            i--;
+        }
 
     }
 }
