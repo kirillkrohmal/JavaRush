@@ -7,22 +7,31 @@ package lesson07.task04;
 - centerX, centerY, radius, width, color
 */
 
-public class Circle
-{
+public class Circle {
     //Напишите тут ваш код
+    int centerX;
+    int centerY;
+    int radius;
+    int wigth;
+    int color;
 
-
-    public void initialize (int centerX, int centerY, int radius)
-    {
-
+    public void initialize (int centerX, int centerY, int radius) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.radius = radius;
     }
-    public void initialize (int centerX, int centerY, int radius, int wigth)
-    {
-
+    public void initialize (int centerX, int centerY, int radius, int wigth) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.radius = radius;
+        this.wigth = wigth;
     }
-    public void initialize (int centerX, int centerY, int radius, int wigth, int color)
-    {
-
+    public void initialize (int centerX, int centerY, int radius, int wigth, int color) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.radius = radius;
+        this.wigth = wigth;
+        this.color = color;
     }
 
 

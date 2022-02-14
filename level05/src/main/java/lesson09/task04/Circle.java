@@ -9,16 +9,29 @@ package lesson09.task04;
 
 public class Circle {
     //Напишите тут ваш код
-    public Circle (int centerX, int centerY, int radius)
-    {
+    int centerX;
+    int centerY;
+    int radius;
+    int wigth;
+    int color;
 
+
+    public Circle (int centerX, int centerY, int radius) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.radius = radius;
     }
-    public Circle (int centerX, int centerY, int radius, int wigth)
-    {
-
+    public Circle (int centerX, int centerY, int radius, int wigth) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.radius = radius;
+        this.wigth = wigth;
     }
-    public Circle (int centerX, int centerY, int radius, int wigth, int color)
-    {
-
+    public Circle (int centerX, int centerY, int radius, int wigth, int color) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.radius = radius;
+        this.wigth = wigth;
+        this.color = color;
     }
 }

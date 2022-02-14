@@ -12,24 +12,36 @@ package lesson07.task02;
 
 public class Cat {
     //Напишите тут ваш код
-    public void initialize(String name) {
+    String name;
+    int weight;
+    int age;
+    int color;
+    String adress;
 
+    public void initialize(String name) {
+        this.name = name;
     }
 
     public void initialize(String name, int weight, int age) {
-
+        this.name = name;
+        this.weight = weight;
+        this.age = age;
     }
 
     public void initialize(String name, int age) {
-
+        this.name = name;
+        this.age = age;
     }
 
     public void initialize(int weight, int color) {
-
+        this.weight = weight;
+        this.color = color;
     }
 
-    public void initialize ( int weight, int color, String adress) {
-
+    public void initialize (int weight, int color, String adress) {
+        this.weight = weight;
+        this.color = color;
+        this.adress = adress;
     }
 }
 
