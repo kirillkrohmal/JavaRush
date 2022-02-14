@@ -86,38 +86,11 @@ public class Solution
                     + ((father==null)?", no father":", father is " + father.name);
         }
         */
-        Cat grFather = new Cat(reader.readLine());
-        Cat grMather = new Cat(reader.readLine());
-        Cat father   = new Cat(reader.readLine(),   grFather,     null    );
-        Cat mather   = new Cat(reader.readLine(),   null,   grMather        );
-        Cat sun      = new Cat(reader.readLine(),   father,     mather      );
-        Cat daughter = new Cat(reader.readLine(),   father,     mather      );
-        System.out.println(grFather );
-        System.out.println(grMather );
-        System.out.println(father   );
-        System.out.println(mather   );
-        System.out.println(sun      );
-        System.out.println(daughter );
+
+    class Cat{
+
     }
-    public static class Cat{
-        private String name;
-        private Cat father;
-        private Cat mother;
-        Cat(String name){
-            this.name = name;
-        }
-        Cat(String name, Cat father, Cat mother){
-            this.name = name;
-            this.father = father;
-            this.mother = mother;
-        }
-        @Override
-        public String toString(){
-            return "Cat name is "
-                    + name
-                    + ((mother==null)?", no mother":", mother is " + mother.name)
-                    + ((father==null)?", no father":", father is " + father.name);
-        }
+
     }
 
 }

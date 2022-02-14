@@ -15,26 +15,24 @@ public class ConsoleReader {
     public static String readString() throws Exception {
         //Напишите тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s = reader.readLine();
-        return s;
+
+
+        return null;
     }
 
     public static int readInt() throws Exception {
         //Напишите тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s = reader.readLine();
-        int i = Integer.parseInt(s);
-        return i;
 
+
+        return 0;
     }
 
     public static double readDouble() throws Exception {
         //Напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s = reader.readLine();
-        double d = Double.parseDouble(s);
-        return d;
 
+
+        return 0;
     }
 
     public static void readLn() throws Exception {

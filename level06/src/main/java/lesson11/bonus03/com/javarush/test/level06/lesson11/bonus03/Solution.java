@@ -19,36 +19,10 @@ import java.io.InputStreamReader;
 17
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         //Напишите тут ваш код
-        int a, b, tmp;
-        int[] num = new int[5];
-        for (int i = 0; i < 5; i++)
-        {
-            num[i] = Integer.parseInt(reader.readLine());
-        }
-        for (a = 1; a < num.length; a++)
-        {
-            for (b = num.length - 1; b >= a; b--)
-            {
-                if (num[b-1]>num[b])
-                {
-                    tmp = num[b];
-                    num[b] = num[b - 1];
-                    num[b - 1] = tmp;
-                }
-            }
-        }
-        for (int i = 0; i < num.length; i++)
-        {
-            if (i!= num.length-1)
-                System.out.println(num[i]);
-            else
-                System.out.print(num[i]);
-        }
+
     }
 }

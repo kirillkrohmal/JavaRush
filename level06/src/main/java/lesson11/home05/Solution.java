@@ -7,23 +7,19 @@ package lesson11.home05;
 на экран описание идеи - это то, что возвращает метод getDescription
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
-        printIdea(new Idea());
+public class Solution {
+    public static void main(String[] args) {
+
     }
 
     //добавьте класс Idea тут
-    public static class Idea
-    {
-        public String getDescription()
-        {
-            return "Some text";
+    public static class Idea {
+        public String getDescription() {
+
+            return null;
         }
     }
-    public static void  printIdea(Idea idea)
-    {
-        System.out.println(idea.getDescription());
+    public static void  printIdea(Idea idea) {
+
     }
 }

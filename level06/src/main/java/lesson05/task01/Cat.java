@@ -4,13 +4,10 @@ package lesson05.task01;
 В классе Cat создать метод protected void finalize() throws Throwable
 */
 
-public class Cat
-{
+public class Cat {
     //Напишите тут ваш код
-    protected void  finalize()throws Throwable
-    {
+    protected void finalize() throws Throwable {
 
     }
-
 }
 

@@ -6,9 +6,15 @@ import java.io.*;
 Задача: Программа вводит два числа с клавиатуры и выводит их сумму на экран.
 */
 
-public class Solution
-{
+public class Solution {
    public static void main(String[] args) throws Exception {
+      BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+      String a1 = reader.readLine();
+      int a = Integer.parseInt(a1);
+      String b1 = reader.readLine();
+      int b = Integer.parseInt(b1);
 
+      int sum = a + b;
+      System.out.println("Sum = " + sum);
    }
 }

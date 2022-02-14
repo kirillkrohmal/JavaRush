@@ -4,16 +4,13 @@ package lesson11.home06;
 Создай класс с именем KissMyShinyMetalAss. Создай объект этого класса, выведи его на экран.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
-        System.out.println(KissMyShinyMetalAss.ass);
+public class Solution {
+    public static void main(String[] args) {
+
     }
 
-    public static class KissMyShinyMetalAss
-    {
-        static KissMyShinyMetalAss ass = new KissMyShinyMetalAss();
+    public static class KissMyShinyMetalAss {
+
     }
 
 }

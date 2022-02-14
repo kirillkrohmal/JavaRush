@@ -14,18 +14,14 @@ public class StringHelper
     {
         String result = "";
         //Напишите тут ваш код
-        for (int i = 1; i<=5; i++)
-            result = result + s;
+
         return result;
     }
 
     public static String multiply(String s, int count)
     {
-        String result = "";
-        //Напишите тут ваш код
-        for (int i = 1; i <= count; i++)
-            result = result + s;
 
-        return result;
+
+        return s;
     }
 }
