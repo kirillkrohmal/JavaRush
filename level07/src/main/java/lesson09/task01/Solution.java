@@ -20,34 +20,11 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<Integer> list = new ArrayList<Integer>();
 
-        for (int i = 0; i < 20; i++) {
-            list.add(Integer.parseInt(reader.readLine()));
-        }
 
-        ArrayList<Integer>list1 = new ArrayList<Integer>();
-        ArrayList<Integer>list2 = new ArrayList<Integer>();
-        ArrayList<Integer>list3 = new ArrayList<Integer>();
-
-        for (int i = 0; i < list.size(); i++) {
-            Integer y = list.get(i);
-
-            if (y % 3 == 0)
-                list1.add(y);
-            if (y % 2 == 0)
-                list2.add(y);
-            if (y % 2 != 0 && y % 3 != 0)
-                list3.add(y);
-        }
-
-        printList(list1);
-        printList(list2);
-        printList(list3);
     }
 
     public static void printList(List<Integer> list) {
         //add your code here
-        for (int x : list)
-            System.out.println(x);
     }
 
 }

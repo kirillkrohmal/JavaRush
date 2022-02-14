@@ -25,29 +25,7 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<String> list = new ArrayList<String>();
-        while (true)
-        {
-            String word = reader.readLine();
-            if (word.isEmpty()) break;
-            list.add(word);
-        }
 
-        ArrayList<String> words = new ArrayList<String>();
-        for (int i = 0; i < list.size(); i++)
-        {
-            String word = list.get(i);
-            if (word.length() % 2 == 0)
-            {
-                words.add(word + " " + word);
-            }
-            else
-                words.add(word + " " + word + " " + word);
-        }
-
-        for (int i = 0; i < words.size(); i++)
-        {
-            System.out.println(words.get(i));
-        }
     }
 }
 

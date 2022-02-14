@@ -18,25 +18,6 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //Напишите тут ваш код
-        int[] numbers = new int[20];
-        for (int i = 0; i < numbers.length; i++)
-        {
-            numbers[i] = Integer.parseInt(reader.readLine());
-        }
-        int minimum = numbers[0];
-        for (int i = 0; i < numbers.length; i++)
-        {
-            if (numbers[i] < minimum)
-                minimum = numbers[i];
-        }
-        int maximum = numbers[0];
-        for (int i = 0; i < numbers.length; i++)
-        {
-            if (numbers[i] > maximum)
-                maximum = numbers[i];
-        }
 
-        System.out.println(maximum);
-        System.out.println(minimum);
     }
 }

@@ -12,16 +12,8 @@ import java.util.Collections;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
-        ArrayList<String>list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        for (int i = 0; i < 5; i++) {
-            list.add(reader.readLine ());
-        }
-
-        for (int i = 0; i < list.size(); i++) {
-            int x = list.size () - i - 1;
-            System.out.println (list.get (x));
-        }
     }
 }

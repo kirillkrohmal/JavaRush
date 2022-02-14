@@ -17,14 +17,7 @@ public class Solution {
         BufferedReader reader = new BufferedReader (new InputStreamReader (System.in));
         ArrayList<String> list = new ArrayList<> ();
 
-        for (int i = 0; i < 10; i++) {
-            list.add (reader.readLine ());
-        }
-        ArrayList result = doubleValues (list);
 
-        for (int i = 0; i < result.size (); i++) {
-            System.out.println (result);
-        }
         //print result - вывести на экран result
     }
 
@@ -33,10 +26,7 @@ public class Solution {
         // add your code here - добавь код тут
         ArrayList<String> list2 = new ArrayList<> ();
 
-        for (int i = 0; i < list.size (); i++) {
-            list2.add (list.get (i));
-            list2.add (list.get (i));
-        }
+
         return list2;
     }
 }

@@ -11,26 +11,8 @@ import java.io.InputStreamReader;
 */
 
 public class Solution {
-
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] array = new int[10];
-        int[] massiv = new int[10];
 
-        for (int i = 0; i < array.length; i++) {
-            String s = reader.readLine();
-            array[i] = Integer.parseInt (s);
-        }
-
-        for (int i = 0; i < array.length; i++) {
-
-            massiv[i] = array[9 - i];
-        }
-
-        for (int i = 0; i < array.length; i++) {
-            array[i] = massiv[i];
-            System.out.println (array[i]);
-        }
     }
 }

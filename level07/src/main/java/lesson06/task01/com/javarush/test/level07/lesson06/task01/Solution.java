@@ -16,16 +16,5 @@ public class Solution {
         //Напишите тут ваш код
         ArrayList<String> strings = new ArrayList<String> ();
 
-        strings.add ("a1");
-        strings.add ("a2");
-        strings.add ("a3");
-        strings.add ("a4");
-        strings.add ("a5");
-
-        System.out.println (strings.size ());
-
-        for (String string : strings) {
-            System.out.println (string);
-        }
     }
 }

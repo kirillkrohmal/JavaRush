@@ -6,11 +6,11 @@ package lesson11.home06;
 
 public class Solution {
     public static void main(String[] args) {
-
+        KissMyShinyMetalAss kissMyShinyMetalAss = new KissMyShinyMetalAss();
+        System.out.println(kissMyShinyMetalAss);
     }
 
     public static class KissMyShinyMetalAss {
 
     }
-
 }

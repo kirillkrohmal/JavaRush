@@ -1,5 +1,6 @@
 package lesson11.home07;
 
+import java.sql.Statement;
 import java.util.ArrayList;
 
 /* Три статические переменных name
@@ -13,10 +14,10 @@ public class Solution {
         Solution.name = name;
     }
     public static class Cat {
-
+        public static String name;
     }
 
     public static class Dog {
-
+        public static String name;
     }
 }
