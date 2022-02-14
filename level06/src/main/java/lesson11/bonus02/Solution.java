@@ -5,10 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /* Нужно добавить в программу новую функциональность
-Задача: У каждой кошки есть имя и кошка-мама. Создать класс, который бы описывал данную ситуацию. Создать два объекта: кошку-дочь и кошку-маму. Вывести их на экран.
-Новая задача: У каждой кошки есть имя, кошка-папа и кошка-мама. Изменить класс Cat так, чтобы он мог описать данную ситуацию.
-Создать 6 объектов: маму, папу, сына, дочь, бабушку(мамина мама) и дедушку(папин папа).
-Вывести их всех на экран в порядке: дедушка, бабушка, папа, мама, сын, дочь.
+Задача: У каждой кошки есть имя и кошка-мама. Создать класс, который бы описывал
+данную ситуацию. Создать два объекта: кошку-дочь и кошку-маму. Вывести их на экран.
+Новая задача: У каждой кошки есть имя, кошка-папа и кошка-мама. Изменить класс Cat так,
+чтобы он мог описать данную ситуацию. Создать 6 объектов: маму, папу, сына, дочь,
+бабушку(мамина мама) и дедушку(папин папа). Вывести их всех на экран в порядке:
+дедушка, бабушка, папа, мама, сын, дочь.
 
 Пример ввода:
 дедушка Вася
@@ -27,65 +29,11 @@ Cat name is сын Мурчик, mother is мама Василиса, father is 
 Cat name is дочь Пушинка, mother is мама Василиса, father is папа Котофей
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        /*Cat catGrandpa = new Cat (reader.readLine());
 
-        Cat catGrandma = new Cat (reader.readLine());
-
-        Cat catFather = new Cat (reader.readLine(), null, catGrandpa);
-
-        Cat catMother = new Cat(reader.readLine(), catGrandma, null);
-
-        Cat catSon = new Cat (reader.readLine(), catMother, catFather);
-
-        Cat catDaughter = new Cat(reader.readLine(), catMother, catFather);
-
-
-
-
-        System.out.println(catGrandpa);
-        System.out.println(catGrandma);
-        System.out.println(catFather);
-        System.out.println(catMother);
-        System.out.println(catSon);
-        System.out.println(catDaughter);
-    }
-
-    public static class Cat
-    {
-        private String name;
-        private Cat father;
-        private Cat parent;
-
-
-        Cat(String name)
-        {
-            this.name = name;
-        }
-
-
-        Cat(String name, Cat father, Cat parent)
-        {
-            this.name = name;
-            this.father = father;
-            this.parent = parent;
-        }
-
-
-        @Override
-        public String toString()
-        {
-            return "Cat name is "
-                    + name
-                    + ((parent==null)?", no mother":", mother is " + parent.name)
-                    + ((father==null)?", no father":", father is " + father.name);
-        }
-        */
 
     class Cat {
 
