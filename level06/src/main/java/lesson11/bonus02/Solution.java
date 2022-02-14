@@ -87,10 +87,9 @@ public class Solution
         }
         */
 
-    class Cat{
+    class Cat {
 
     }
 
     }
-
 }

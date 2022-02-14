@@ -8,22 +8,17 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class Solution
-{
+public class Solution {
     public static int max = 100;
-    public static void main(String[] args) throws IOException
-    {
+
+    public static void main(String[] args) throws IOException {
         BufferedReader reader  = new BufferedReader(new InputStreamReader(System.in));
 
         String max = "Max is ";
-        int max1;
-        String s = reader.readLine();
-        String s1 = reader.readLine();
-        int a = Integer.parseInt(s);
-        int b = Integer.parseInt(s1);
-        max1 = a > b ? a : b;
+        int a = Integer.parseInt(reader.readLine());
+        int b = Integer.parseInt(reader.readLine());
+        Solution.max = (a > b ? a : b);
 
-        System.out.println("Max is " + max1);
+        System.out.println(max + Solution.max);
     }
-
 }

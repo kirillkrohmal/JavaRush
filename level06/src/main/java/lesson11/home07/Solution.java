@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class Solution {
     static String name;
+
     Solution(String name) {
         Solution.name = name;
     }
