@@ -3,6 +3,9 @@ package lesson04.task01;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Collections;
+import java.util.Set;
+import java.util.TreeSet;
 
 /* Максимальное среди массива на 20 чисел
 1. В методе initializeArray():
@@ -15,14 +18,23 @@ public class Solution {
     public static void main(String[] args) throws Exception {
 
     }
+    
     public static int[] initializeArray() throws IOException {
         //initialize(create and fill) an array here - инициализируйте (создайте и заполните) массив тут
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int[] array = new int[20];
 
-        return new int[0];
+        for (int i = 0; i < array.length; i++) {
+            String d = reader.readLine();
+            array[i] = Integer.parseInt(d);
+        }
+
+        return array;
     }
 
     public static int max(int[] array) {
         //find the max value here - найдите максимальное значение в этом методе
+
 
         return 0;
     }
