@@ -13,7 +13,20 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int[] list = new int[10];
 
+        for (int i = 0; i < list.length; i++) {
+            list[i] = Integer.parseInt(reader.readLine());
+        }
 
+        for (int i = 0; i < 5; i++) {
+            int t = list[i];
+            list[i] = list[list.length - 1 - i];
+            list[list.length - 1 - i] = t;
+        }
+
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i]);
+        }
     }
 }

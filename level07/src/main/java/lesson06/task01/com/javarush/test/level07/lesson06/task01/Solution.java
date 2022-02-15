@@ -16,5 +16,15 @@ public class Solution {
         //Напишите тут ваш код
         ArrayList<String> strings = new ArrayList<String> ();
 
+        strings.add("Мама");
+        strings.add("Мыла");
+        strings.add("Раму");
+        strings.add("Не знаю");
+        strings.add("как");
+
+
+        for (int i = 0; i < strings.size(); i++) {
+            System.out.println(strings.get(i));
+        }
     }
 }
