@@ -21,16 +21,16 @@ public class Solution {
         int[] list = new int[10];
 
 
-        for (int i = 0; i < ; i++) {
-            
+        for (int i = 0; i < array.length; i++) {
+            array[i] = reader.readLine();
         }
 
-        for (int i = 0; i < ; i++) {
-            
+        for (int i = 0; i < list.length; i++) {
+            list[i] = array[i].length();
         }
 
-        for (int i = 0; i < ; i++) {
-            
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i]);
         }
     }
 }
