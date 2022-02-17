@@ -8,13 +8,15 @@ import java.util.*;
 
 public class Solution {
     public static Object createArrayList() {
+        ArrayList<String> arrayList = new ArrayList<>();
 
-
-        return null;
+        return arrayList;
     }
 
     public static Object createLinkedList() {
 
-        return null;
+        LinkedList<String> strings = new LinkedList<>();
+
+        return strings;
     }
 }

@@ -21,9 +21,6 @@ public class Solution {
         return 0;
     }
 
-
-
-
     public static void insert10000(List list) {
 
     }
