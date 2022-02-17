@@ -25,6 +25,7 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         ArrayList<String> list = new ArrayList<String> ();
 
+
     }
     public static ArrayList<String> fix(ArrayList<String> list) {
 

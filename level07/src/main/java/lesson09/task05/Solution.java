@@ -11,22 +11,29 @@ import java.util.ArrayList;
 */
 
 public class Solution {
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         //read strings and init ArrayList list here - считать строки с консоли и объявить ArrayList list тут
         BufferedReader reader = new BufferedReader (new InputStreamReader (System.in));
         ArrayList<String> list = new ArrayList<> ();
 
+        for (int i = 0; i < 10; i++) {
+            list.add(reader.readLine());
+        }
 
+        ArrayList<String> arrayList = doubleValues(list);
         //print result - вывести на экран result
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(arrayList.get(i));
+        }
+
     }
 
-    public static ArrayList<String> doubleValues(ArrayList<String> list)
-    {
+    public static ArrayList<String> doubleValues(ArrayList<String> list) {
         // add your code here - добавь код тут
-        ArrayList<String> list2 = new ArrayList<> ();
-
-
-        return list2;
+        for (int i = 0; i < list.size(); i++) {
+            list.add(i, list.get(i));
+            i += 2;
+        }
+        return list;
     }
 }
