@@ -25,27 +25,11 @@ import java.util.Map;
 Абрамовичи
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //list of addresses
-        Map<String, String> adress = new HashMap<String, String>();
-        while (true) {
-            String townName = reader.readLine();
-            if (townName.isEmpty()) break;
-            String familyName = reader.readLine();
-            adress.put(townName, familyName);
-        }
 
-        //read home number
-        String currentTown = reader.readLine();
-        for(Map.Entry<String, String> pair : adress.entrySet()) {
-            if (currentTown.equals(pair.getKey()))
-                System.out.println(pair.getValue());
-            else continue;
-        }
     }
 }

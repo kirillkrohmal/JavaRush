@@ -17,21 +17,9 @@ import static java.lang.Character.toUpperCase;
   Мама     Мыла Раму.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s = reader.readLine();
-        char[] array = s.toCharArray();
-        array[0] = toUpperCase(array[0]);
-        for (int i = 0; i < array.length-1; i++) {
-            if ((array[i] == ' ' && array[i + 1] != ' ')) {
-                array[i + 1] = toUpperCase(array[i + 1]);
-            }
-        }
-        //напишите тут ваш код
-        String text = new String(array);
-        System.out.println(text);
+
     }
 }

@@ -10,45 +10,26 @@ import java.util.List;
 Метод getTimeMsOfGet  должен вернуть время его исполнения в миллисекундах.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
-        System.out.println(getTimeMsOfGet(fill(new ArrayList())));
-        System.out.println(getTimeMsOfGet(fill(new LinkedList())));
+public class Solution {
+    public static void main(String[] args) {
+
     }
 
-    private static List fill(List list)
-    {
-        for(int i = 0; i < 11; i++)
-        {
-            list.add(new Object());
-        }
+    private static List fill(List list) {
+
         return list;
     }
 
-    public static long  getTimeMsOfGet(List list)
-    {
+    public static long  getTimeMsOfGet(List list) {
         //напишите тут ваш код
-        Date currentDate = new Date();
-        get10000(list);
-        Date newDate = new Date();
-        long msDelay = newDate.getTime() - currentDate.getTime();
-        System.out.println("Time delay is: " + msDelay + " in ms");
-        return msDelay;
+
 
         //напишите тут ваш код
 
+        return 0;
     }
 
-    public static void get10000(List list)
-    {
-        if (list.isEmpty()) return;
-        int x = list.size() / 2;
+    public static void get10000(List list) {
 
-        for (int i = 0; i < 10000; i++)
-        {
-            list.get(x);
-        }
     }
 }

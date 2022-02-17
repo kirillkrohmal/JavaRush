@@ -18,6 +18,21 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //Напишите тут ваш код
+        ArrayList<String> list = new ArrayList<>();
 
+        for (int i = 0; true; i++) {
+
+            String s = reader.readLine();
+            list.add(s);
+            
+            if (list.get(i).equals("end")) {
+                list.remove(i);
+                break;
+            }
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
     }
 }

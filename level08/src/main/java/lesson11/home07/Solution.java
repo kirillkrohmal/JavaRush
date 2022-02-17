@@ -4,8 +4,7 @@ package lesson11.home07;
 Переставь один модификатор static, чтобы пример скомпилировался.
 */
 
-public class Solution
-{
+public class Solution {
     public static int A = 5;
     public static int B = 2;
 

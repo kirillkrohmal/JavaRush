@@ -10,42 +10,18 @@ import java.util.Map;
 Вывести результат на экран, каждый элемент с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
-        String[] cats = new String[]{"васька", "мурка", "дымка", "рыжик", "серый", "снежок", "босс", "борис", "визя", "гарфи"};
-        HashMap<String, Cat> map = addCatsToMap(cats);
-        for (Map.Entry<String, Cat> pair : map.entrySet())
-        {
-            System.out.println(pair.getKey() + " - " + pair.getValue());
-        }
+public class Solution {
+    public static void main(String[] args) throws Exception {
+
     }
 
-    public static HashMap<String, Cat> addCatsToMap(String[] cats)
-    {
+    public static HashMap<String, Cat> addCatsToMap(String[] cats) {
         //Напишите тут ваш код
-        HashMap<String, Cat> allCats = new HashMap<String, Cat>();
-        for (String s : cats)
-        {
-            allCats.put(s, new Cat(s));
-        }
-        return allCats;
+
+        return null;
     }
 
-    public static class Cat
-    {
-        String name;
+    public static class Cat {
 
-        public Cat(String name)
-        {
-            this.name = name;
-        }
-
-        @Override
-        public String toString()
-        {
-            return name != null ? name.toUpperCase() : null;
-        }
     }
 }
