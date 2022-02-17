@@ -15,5 +15,19 @@ public class Solution {
         //напишите тут ваш код
         Set<String> set = new HashSet<String>();
 
+        set.add("арбуз");
+        set.add("банан");
+        set.add("вишня");
+        set.add("груша");
+        set.add("дыня");
+        set.add("ежевика");
+        set.add("жень-шень");
+        set.add("земляника");
+        set.add("ирис");
+        set.add("картофель");
+
+        for (String s : set) {
+            System.out.println(s);
+        }
     }
 }
