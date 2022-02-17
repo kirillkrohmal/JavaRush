@@ -13,10 +13,8 @@ import java.util.List;
 Вывести строки на экран, каждую с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //Напишите тут ваш код

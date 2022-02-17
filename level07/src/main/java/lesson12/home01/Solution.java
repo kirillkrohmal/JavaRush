@@ -17,6 +17,14 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //Напишите тут ваш код
+        int list[] = new int[10];
 
+        for (int i = 0; i < list.length; i++) {
+            list[i] = Integer.parseInt(reader.readLine());
+        }
+
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[10 - 1 - i ]);
+        }
     }
 }

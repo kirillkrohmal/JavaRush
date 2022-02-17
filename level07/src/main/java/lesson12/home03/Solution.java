@@ -11,13 +11,30 @@ import java.util.List;
 Вывести на экран максимальное и минимальное числа через пробел.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //Напишите тут ваш код
+        int[] array = new int[20];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = Integer.parseInt(reader.readLine());
+        }
+
+        int minimum = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] < minimum) {
+                minimum = array[i];
+            }
+        }
+
+        int maximum = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] > maximum) {
+                maximum = array[i];
+            }
+        }
 
     }
 }
