@@ -5,10 +5,8 @@ package lesson06.task01;
 int a = 42 / 0;
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         try
         {

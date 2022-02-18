@@ -8,17 +8,12 @@ import java.util.*;
 Получить из Map множество(Set) всех имен и вывести его на экран.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
-        Map<String, Cat> map = createMap();
-        Set<Cat> set = convertMapToSet(map);
-        printCatSet(set);
+public class Solution {
+    public static void main(String[] args) {
+
     }
 
-    public static Map<String, Cat> createMap()
-    {
+    public static Map<String, Cat> createMap() {
         //напишите тут ваш код
         Map<String, Cat> map = new HashMap<String, Cat>();
         map.put("Vaska", new Cat ("Vaska"));
@@ -34,37 +29,24 @@ public class Solution
         return map;
     }
 
-    public static Set<Cat> convertMapToSet(Map<String, Cat> map)
-    {
-        Set<Cat> set = new HashSet<Cat>();
-        Iterator<Map.Entry<String, Cat>> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()){
-            Cat s = iterator.next().getValue();
-            set.add(s);
-        }
-        return set;
+    public static Set<Cat> convertMapToSet(Map<String, Cat> map) {
+
+
+        return null;
     }
 
-    public static void printCatSet(Set<Cat> set)
-    {
-        for (Cat cat:set)
-        {
-            System.out.println(cat);
-        }
+    public static void printCatSet(Set<Cat> set) {
+
     }
 
-    public static class Cat
-    {
+    public static class Cat {
         private String name;
 
-
-        public Cat(String name)
-        {
+        public Cat(String name) {
             this.name = name;
         }
 
-        public String toString()
-        {
+        public String toString() {
             return "Cat "+this.name;
         }
     }

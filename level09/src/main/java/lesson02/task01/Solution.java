@@ -39,7 +39,7 @@ public class Solution
     {
         method5();
         //напишите тут ваш код
-StackTraceElement[] stackTraceElements =  Thread.currentThread().getStackTrace();
+        StackTraceElement[] stackTraceElements =  Thread.currentThread().getStackTrace();
         return Thread.currentThread().getStackTrace();
     }
 

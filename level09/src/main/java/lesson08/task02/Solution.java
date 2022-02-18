@@ -11,28 +11,21 @@ package lesson08.task02;
 6. Напиши catch, который перехватит все три Exception1, Exception2 и Exception3
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
       //напишите тут ваш код
-        try
-        {
+        try {
             method1();
         }
-        catch (Exception1 e)
-        {
+        catch (Exception1 e) {
 
         }
-
-
 
         //напишите тут ваш код
 
     }
 
-    public static void method1() throws Exception1, Exception2, Exception3
-    {
+    public static void method1() throws Exception1, Exception2, Exception3 {
         int i = (int) (Math.random() * 3);
         if (i == 0)
             throw new Exception1();

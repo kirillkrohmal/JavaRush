@@ -8,10 +8,8 @@ import java.io.InputStreamReader;
 Задача: Программа вводит два имени файла. И копирует первый файл на место заданное вторым именем.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         String sourceFileName = reader.readLine();

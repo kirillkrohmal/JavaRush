@@ -13,8 +13,7 @@ public class Solution
     }
 
     public static void processExceptions(Solution obj) {
-        try
-        {
+        try {
             obj.method1();
             obj.method2();
             obj.method3();

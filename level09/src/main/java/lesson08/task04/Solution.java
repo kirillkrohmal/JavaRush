@@ -12,32 +12,26 @@ import java.rmi.RemoteException;
 public class Solution {
     public static void main(String[] args) {
 
-            processExceptions(new Solution());
+        processExceptions(new Solution());
 
 
     }
 
     public static void processExceptions(Solution obj) {
-        try
-        {
+        try {
             obj.method1();
             obj.method2();
             obj.method3();
         }
-        catch (NoSuchFieldException e)
-        {
+        catch (NoSuchFieldException e) {
             System.out.println(e);
         }
-        catch (RemoteException e)
-        {
+        catch (RemoteException e) {
             System.out.println(e);
         }
-        catch (IOException e)
-        {
+        catch (IOException e) {
             System.out.println(e);
         }
-
-
     }
 
     public void method1() throws IOException {

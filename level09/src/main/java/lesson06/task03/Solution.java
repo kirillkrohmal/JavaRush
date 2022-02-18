@@ -6,20 +6,16 @@ int[] m = new int[2];
 m[8] = 5;
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        try
-        {
+        try {
             int[] m = new int[2];
             m[8] = 5;
         }
 
         //напишите тут ваш код
-        catch (Exception e)
-        {
+        catch (Exception e) {
             System.out.println(e);
         }
     }

@@ -26,8 +26,7 @@ public class Solution {
         try {
             processExceptions();
         }
-        catch (FileSystemException e)
-        {
+        catch (FileSystemException e) {
             BEAN.log(e);
         }
     }
@@ -35,17 +34,14 @@ public class Solution {
         try {
             BEAN.methodThrowExceptions();
         }
-        catch (FileSystemException e)
-        {
+        catch (FileSystemException e) {
             BEAN.log(e);
             throw e;
         }
-        catch (CharConversionException e)
-        {
+        catch (CharConversionException e) {
             BEAN.log(e);
         }
-        catch (IOException e)
-        {
+        catch (IOException e) {
             BEAN.log(e);
         }
     }

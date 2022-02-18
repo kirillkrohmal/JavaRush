@@ -5,21 +5,16 @@ package lesson11.home02;
 Обернуть вызов sleep в try..catch.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
-        for (int i = 10; i >= 0; i--)
-        {
+public class Solution {
+    public static void main(String[] args) {
+        for (int i = 10; i >= 0; i--) {
             System.out.println(i);
-
-            //напишите тут ваш код
             try {
                 Thread.sleep(100);
-            }
-            catch (Exception e) {
+            } catch (InterruptedException e) {
 
             }
         }
+
     }
 }

@@ -19,10 +19,7 @@ public class Solution {
 
     public static void main(String[] args) {
         // напишите тут ваш код
-        wolf.killed.add(grandmother);
-        wolf.ate.add(grandmother);
-        wolf.ate.add(hood);
-        woodman.killed.add(wolf);
+
     }
 
     //красная шапочка

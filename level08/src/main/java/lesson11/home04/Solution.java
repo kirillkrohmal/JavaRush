@@ -15,7 +15,8 @@ import java.util.List;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-
+        List<Integer> list = getIntegerList();
+        System.out.println(getMinimum(list));
     }
 
     public static int getMinimum(List<Integer> array) {
@@ -34,9 +35,11 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(bufferedReader.readLine());
+        List<Integer> list = new LinkedList<>();
 
-
-
-        return null;
+        for (; N > 0; N--) {
+            list.add(Integer.parseInt(bufferedReader.readLine()));
+        }
+        return list;
     }
 }
