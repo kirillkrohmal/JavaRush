@@ -30,14 +30,37 @@ public class Solution {
 
     public static void removeTheFirstNameDuplicates(HashMap<String, String> map) {
         //напишите тут ваш код
+        HashMap<String, String> hashMap = new HashMap<>(map);
 
+        for (Map.Entry<String, String> entry : hashMap.entrySet()) {
+            int count = 0;
+
+            for (Map.Entry<String, String> stringEntry : hashMap.entrySet()) {
+                if (entry.getValue().equals(stringEntry.getValue())) {
+                    count++;
+                }
+            } if (count > 1) {
+                removeItemFromMapByValue(map, entry.getValue());
+            }
+        }
     }
 
     public static void removeItemFromMapByValue(HashMap<String, String> map, String value) {
+        HashMap<String, String> element = new HashMap<>(map);
+
+        for (Map.Entry<String, String> entry : element.entrySet()) {
+            if (entry.getValue().equals(value)) {
+                map.remove(entry.getKey());
+            }
+        }
 
     }
 
     public static void main(String[] args) {
-
+        HashMap<String, String> map = createMap();
+        removeTheFirstNameDuplicates(map);
+        for (Map.Entry<String, String> pair : map.entrySet()) {
+            System.out.println(pair.getKey() + " " + pair.getValue());
+        }
     }
 }

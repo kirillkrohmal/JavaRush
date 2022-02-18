@@ -30,6 +30,22 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //list of addresses
+        Map<String, String> map = new HashMap<>();
 
+        while(true) {
+            String townName = reader.readLine();
+
+            if (townName.isEmpty()) break;
+            String familyName = reader.readLine();
+
+            map.put(townName, familyName);
+        }
+
+        String currentTown = reader.readLine();
+        for (Map.Entry<String, String> stringEntry : map.entrySet()) {
+            if (currentTown.equals(stringEntry.getKey())) {
+                System.out.println(stringEntry.getValue());
+            } else continue;
+        }
     }
 }
