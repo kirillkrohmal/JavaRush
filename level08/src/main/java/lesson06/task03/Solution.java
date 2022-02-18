@@ -12,16 +12,23 @@ import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
-
+        System.out.println(getTimeMsOfInsert(new ArrayList()));
+        System.out.println(getTimeMsOfInsert(new LinkedList()));
     }
 
     public static long getTimeMsOfInsert(List list) {
         //напишите тут ваш код
-
-        return 0;
+        Date currentTime = new Date();
+        insert10000(list);
+        Date oldTime = new Date();
+        long msDelay = oldTime.getTime() - currentTime.getTime();
+        System.out.println("Time distance is: " + msDelay + " in ms");
+        return msDelay;
     }
 
     public static void insert10000(List list) {
-
+        for (int i = 0; i < 10000; i++) {
+            list.add(0, new Object());
+        }
     }
 }

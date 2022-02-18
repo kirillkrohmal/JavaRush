@@ -11,8 +11,27 @@ public class Solution {
     public static HashSet<String> createSet() {
         //напишите тут ваш код
         Set<String> set = new HashSet<String>();
+        set.add("Лала");
+        set.add("Лоло");
+        set.add("Лулулау");
+        set.add("Ллалав");
+        set.add("Лалаыл");
+        set.add("Лйцулйуц");
+        set.add("Лмлмл");
+        set.add("Лцулй");
+        set.add("Лаи");
+        set.add("Лои");
+        set.add("Лохи");
+        set.add("Ляхи");
+        set.add("Лаъи");
+        set.add("Лааи");
+        set.add("Ллп");
+        set.add("Лепс");
+        set.add("Ляпс");
+        set.add("Люпс");
+        set.add("Лва");
+        set.add("Лалка");
 
-
-        return null;
+        return (HashSet<String>)set;
     }
 }
