@@ -20,12 +20,22 @@ public class Solution {
 
     public static int getMinimum(List<Integer> array) {
         // Найти минимум
+        int min = array.get(0);
 
-        return 0;
+        for (Integer integer : array) {
+            if (integer < min)
+                min = integer;
+        }
+        return min;
     }
 
     public static List<Integer> getIntegerList() throws IOException {
         //Тут создать и заполнить список
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        int N = Integer.parseInt(bufferedReader.readLine());
+
+
 
         return null;
     }

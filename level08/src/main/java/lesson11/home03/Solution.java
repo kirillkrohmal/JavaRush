@@ -12,18 +12,30 @@ import java.util.Map;
 
 public class Solution {
     public static void main(String[] args) {
-
+        Map<String, String> map = createPeopleList();
+        printPeopleList(map);
     }
 
     public static Map<String, String> createPeopleList() {
         //напишите тут ваш код
         Map<String, String> map = new HashMap<String, String>();
+        map.put("Лапов", "Сергей");
+        map.put("Петров", "Владимир");
+        map.put("Сидоров", "Денис");
+        map.put("Иванов", "Иван");
+        map.put("Погорелов", "Александр");
+        map.put("Лапов", "Евгений");
+        map.put("Гилевич", "Анна");
+        map.put("Дудченко", "Елена");
+        map.put("Денисюк", "Анна");
+        map.put("Бондаренко", "Игорь");
 
         return map;
     }
 
     public static void printPeopleList(Map<String, String> map) {
-
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
     }
-
 }

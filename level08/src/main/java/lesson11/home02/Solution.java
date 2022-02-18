@@ -21,36 +21,55 @@ public class Solution {
         Set<Cat> cats = createCats();
         Set<Dog> dogs = createDogs();
 
+        Set<Object> set = join(cats, dogs);
+        printPets(set);
 
+        removeCats(set, cats);
+        printPets(set);
     }
 
     public static Set<Cat> createCats() {
+        HashSet<Cat> cats = new HashSet<>();
 
+        for (int i = 0; i < 4; i++) {
+            cats.add(new Cat());
+        }
 
-        return null;
+        return cats;
     }
 
     public static Set<Dog> createDogs() {
         //напишите тут ваш код
         HashSet<Dog> result = new HashSet<Dog>();
 
-        return null;
+        for (int i = 0; i < 3; i++) {
+            result.add(new Dog());
+        }
+
+        return result;
     }
 
     public static Set<Object> join(Set<Cat> cats, Set<Dog> dogs) {
         //напишите тут ваш код
         Set <Object> pets = new HashSet<Object>();
+        pets.addAll(cats);
+        pets.addAll(dogs);
 
         return pets;
     }
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //напишите тут ваш код
-
+        for (Cat cat : cats) {
+            pets.remove(cat);
+        }
     }
 
     public static void printPets(Set<Object> pets) {
         //напишите тут ваш код
+        for (Object pet : pets) {
+            System.out.println(pet);
+        }
 
     }
 
