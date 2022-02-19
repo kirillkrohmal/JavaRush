@@ -4,8 +4,7 @@ package lesson11.bonus02;
 Добавь общий базовый класс к классам-фигур:  (фигуры из шахмат).
 */
 
-public class Solution
-{
+public class Solution {
     public static void main(String[] args)
     {
     }

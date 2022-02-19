@@ -5,19 +5,15 @@ package lesson06.task01;
 Унаследовать пегаса от лошади.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
     }
 
-    public class Horse
-    {
+    public class Horse {
 
     }
 
-    public class Pegas extends Horse
-    {
+    public class Pegas extends Horse {
 
     }
 }
