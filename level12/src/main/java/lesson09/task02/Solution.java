@@ -5,10 +5,8 @@ package lesson09.task02;
 Добавить в каждый интерфейс по одному методу.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 

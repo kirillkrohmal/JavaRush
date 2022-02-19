@@ -5,27 +5,24 @@ package lesson04.task05;
 Каждый метод должен возвращать максимальное из двух переданных в него чисел.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 
     //Напишите тут ваши методы
     public static int max (int i, int j) {;
-        if (i > j)
-            return i;
-        return j;
-    }
-    public static long max (long i, long j) {
-        if (i > j)
-            return i;
-        return j;
-    }
-    public static double max (double i, double j) {
-        if (i > j)
+
         return i;
-        return j;
+    }
+
+    public static long max (long i, long j) {
+
+        return i;
+    }
+
+    public static double max (double i, double j) {
+
+        return i;
     }
 }

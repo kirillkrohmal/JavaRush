@@ -5,25 +5,20 @@ package lesson12.home01;
 «Я - кот».
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
-        Pet pet = new Cat();
+public class Solution {
+    public static void main(String[] args) {
 
-        System.out.println(pet.getName());
+
+
     }
 
-    public static class Pet
-    {
-        public String getName()
-        {
+    public static class Pet {
+        public String getName() {
             return "Я - кот";
         }
     }
 
-    public static class Cat extends Pet
-    {
+    public static class Cat {
 
     }
 }

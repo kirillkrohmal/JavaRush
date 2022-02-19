@@ -7,8 +7,7 @@ package lesson12.home05;
 Замечание: постарайся определять тип животного как можно более точно.
 */
 
-public class Solution
-{
+public class Solution {
     public static void main(String[] args)
     {
         System.out.println(getObjectType(new Cat()));
@@ -19,21 +18,8 @@ public class Solution
         System.out.println(getObjectType(new Animal()));
     }
 
-    public static String getObjectType(Object o)
-    {
+    public static String getObjectType(Object o) {
         //напишите тут ваш код
-        if (o instanceof Cat)
-            return "Кот";
-        if (o instanceof Tiger)
-            return "Тигр";
-        if (o instanceof Lion)
-            return "Лев";
-        if (o instanceof Bull)
-            return "Бык";
-        if (o instanceof Cow)
-            return "Корова";
-        if (o instanceof Animal)
-            return "Животное";
 
         return "Животное";
     }

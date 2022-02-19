@@ -7,10 +7,8 @@ package lesson09.task05;
 Объяви класс Human абстрактным.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 

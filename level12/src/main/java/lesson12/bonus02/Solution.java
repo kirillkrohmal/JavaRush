@@ -4,31 +4,17 @@ package lesson12.bonus02;
 Сделать класс Pegas(пегас) на основе класса Horse(лошадь) и интерфейса Fly(летать).
 */
 
-public class Solution
-{
-    public  static void main(String[] args)
-    {
-        Pegas horse = new Pegas();
+public class Solution {
+    public  static void main(String[] args) {
+
     }
 
-    public static interface Fly
-    {
+    public static interface Fly {
         public void fly();
     }
 
-    public static class Horse
-    {
-        public void run()
-        {
-
-        }
-    }
-
-    public static class Pegas extends Horse implements Fly
-    {
-        @Override
-        public void fly()
-        {
+    public static class Horse {
+        public void run() {
 
         }
     }

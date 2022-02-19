@@ -4,8 +4,7 @@ package lesson04.task01;
 Написать два метода: print(int) и print(String).
 */
 
-public class Solution
-{
+public class Solution {
     public static void main(String[] args)
     {
 
