@@ -21,6 +21,8 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //алфавит
-    }
+        String abc = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
 
+
+    }
 }
