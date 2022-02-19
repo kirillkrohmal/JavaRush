@@ -17,6 +17,16 @@ public class Solution {
 
         HashMap<Integer, String> map = new HashMap<Integer, String>();
 
+        for (int i = 0; i < 10; i++) {
+            int index = Integer.parseInt(reader.readLine());
+            String name = reader.readLine();
+            map.put(index, name);
+        }
 
-    }gi
+        for (Map.Entry<Integer, String> pair : map.entrySet()) {
+            int id = pair.getKey();
+            String name = pair.getValue();
+            System.out.println("Id=" + id + " Name=" + name);
+        }
+    }
 }
