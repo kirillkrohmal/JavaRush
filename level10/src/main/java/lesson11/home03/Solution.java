@@ -4,10 +4,8 @@ package lesson11.home03;
 Добавить одну операцию по преобразованию типа, чтобы получался ответ: d=1.0.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         int a = 257;
         int b = 4;
         int c = 3;

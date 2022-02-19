@@ -15,43 +15,19 @@ import java.util.Map;
 В тестах регистр (большая/маленькая буква) не влияет на результат.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        ArrayList<String> words = new ArrayList<String>();
-        for (int i = 0; i < 20; i++)
-        {
-            words.add(reader.readLine());
-        }
 
-        Map<String, Integer> map = countWords(words);
-
-        for (Map.Entry<String, Integer> pair : map.entrySet())
-        {
-            System.out.println(pair.getKey() + " " + pair.getValue());
-        }
     }
 
-    public static Map<String, Integer> countWords(ArrayList<String> list)
-    {
+    public static Map<String, Integer> countWords(ArrayList<String> list) {
         HashMap<String, Integer> result = new HashMap<String, Integer>();
 
         //напишите тут ваш код
-        for (String elem : list)
-        {
-            if (result.containsKey(elem))
-            {
-                result.put(elem, result.get(elem) + 1);
-            }
-            else
-            {
-                result.put(elem, 1);
-            }
-        }
-        return result;
+
+        return null;
     }
 
 }

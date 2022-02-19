@@ -18,32 +18,13 @@ import java.io.InputStreamReader;
 
 public class Solution
 {
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] array = new int[30];
-        for (int i = 0; i < 30; i++)
-        {
-            array[i] = Integer.parseInt(reader.readLine());
-        }
 
-        sort(array);
-
-       System.out.println(array[9]);
-       System.out.println(array[10]);
     }
 
-    public static void sort(int[] array)
-    {
+    public static void sort(int[] array) {
         //напишите тут ваш код
-        for (int index1 = 0; index1 < array.length; index1++) {
-            for (int index2 = 0; index2 < array.length - 1; index2++) {
-                if (array[index2] > array[index2 + 1]) {
-                    int tmp = array[index2 + 1];
-                    array[index2 + 1] = array[index2];
-                    array[index2] = tmp;
-                }
-            }
-        }
+
     }
 }
