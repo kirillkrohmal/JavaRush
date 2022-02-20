@@ -34,6 +34,7 @@ public class Solution {
         public Human (int age) {
             this.age = age;
         }
+
         public Human (String name, int age) {
             this.humanName = name;
             this.age = age;
