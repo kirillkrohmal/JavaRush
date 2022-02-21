@@ -38,12 +38,9 @@ public class Solution
         String name;
 
         @Override
-        public String toString()
-        {
+        public String toString() {
             return String.format("User has name %s, id = %d", name, id);
         }
-
-
-           }
+    }
 
 }

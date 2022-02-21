@@ -25,4 +25,4 @@ class StringObject implements SimpleObject<String>
             return null;
         }
     }
-    }
+}

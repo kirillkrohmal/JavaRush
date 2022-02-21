@@ -19,24 +19,25 @@ package lesson11.bonus01;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
+import java.util.Scanner;
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         // напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String fileName = reader.readLine();
-        reader.close();
-        ArrayList<Integer> list = new ArrayList<>();
-        BufferedReader inputStream = new BufferedReader(new FileReader(fileName));
-        while (inputStream.ready()) {
-            int number = Integer.parseInt(inputStream.readLine());
-            if (number % 2 == 0) list.add(number);
+        Scanner sr = new Scanner(System.in);
+
+        System.out.print("Введите челое число -> ");
+
+        if(sr.hasNextInt()) {
+            int number = sr.nextInt();
+            String category = (number % 2) == 0 ? "Четное" : "Нечетное";
+
+            System.out.println(category + " число: " + number);
+        } else {
+            System.out.println("Не целое число");
         }
-        Collections.sort(list);
-        for (int i : list) System.out.println(i);
     }
 }
+
+
