@@ -17,7 +17,6 @@ package lesson08.home05;
 */
 
 public class Solution {
-
     public static void main(String[] args) {
         Computer computer = new Computer();
         if (isWork(computer.getKeyboard()) &&
@@ -29,7 +28,7 @@ public class Solution {
     }
 
     public static boolean isWork(CompItem item) {
-
-        return false;
+        System.out.println(item.getName());
+        return item.getName() != null && item.getName().length() > 4;
     }
 }
