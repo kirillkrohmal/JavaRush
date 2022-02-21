@@ -28,26 +28,12 @@ public class Solution
         //ввести с консоли несколько ключей (строк), пункт 7
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String>movies = new ArrayList<>();
-        while (true)
-        {
-            String key = reader.readLine();
-            if (key.equals("cartoon") || key.equals("triller") || key.equals("soapOpera"))
-            {
-                movies.add(key);
-            }
-            else break;
-        }
-        /*
-8 Создать переменную movie класса Movie и для каждой введенной строки(ключа):
-8.1 получить объект используя MovieFactory.getMovie и присвоить его переменной movie
-8.2 вывести на экран movie.getClass().getSimpleName()
-        */
 
-        for (String movieKey : movies )
-        {
-            Movie movie = MovieFactory.getMovie(movieKey);
-            System.out.println(movie.getClass().getSimpleName());
-        }
+/*8 Создать переменную movie класса Movie и для каждой введенной строки(ключа):
+8.1 получить объект используя MovieFactory.getMovie и присвоить его переменной movie
+8.2 вывести на экран movie.getClass().getSimpleName()*/
+
+
 
     }
 
@@ -59,18 +45,6 @@ public class Solution
             Movie movie = null;
 
             //создание объекта SoapOpera (мыльная опера) для ключа "soapOpera"
-            if ("soapOpera".equals(key))
-            {
-                movie = new SoapOpera();
-            }
-
-            //напишите тут ваш код, пункты 5,6
-            if ("cartoon".equals(key)) {
-                movie = new Cartoon();
-            }
-            if ("triller".equals(key)) {
-                movie = new Triller();
-            }
 
             return movie;
         }

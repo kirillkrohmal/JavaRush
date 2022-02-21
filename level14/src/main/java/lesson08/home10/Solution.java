@@ -25,27 +25,20 @@ import java.util.List;
 - учти, что для объекта типа Double нужно вывести "Is double value infinite? " + [Double_object].isInfinite().
 */
 
-public class Solution
-{
+public class Solution {
     public static void main(String[] args)
     {
         new NotIncapsulatedClass();
     }
 
-    public static class NotIncapsulatedClass
-    {
-        public NotIncapsulatedClass()
-        {
+    public static class NotIncapsulatedClass {
+        public NotIncapsulatedClass() {
             List<Number> list = new LinkedList<Number>();
             //1
-            initList(list); // здесь надо просто позвать метод initList
-            printListValues(list); // почему тут правильно позвал метод ?
+             // здесь надо просто позвать метод initList
+             // почему тут правильно позвал метод ?
             //3
-            for (Number object : list)
-            {
-                //Исправь 2 ошибки
-                processCastedObjects(object);
-            }
+
         }
         private List<Number> initList(List<Number>list) {
             list.add(new Double(1000f));
@@ -55,21 +48,10 @@ public class Solution
             return list;
         }
         private void printListValues(List list) {
-            for (int i = 0; i < list.size(); i++)
-            {
-                System.out.println(list.get(i));
-            }
+
         }
         private void processCastedObjects(Number object)   {
-                if (object instanceof Float)
-                {
-                    Float a = (Float) object;
-                    System.out.println("Is float value defined? " + a.isNaN());
-                } else if (object instanceof Double)
-                {
-                    Double a = (Double) object;
-                    System.out.println("Is double value infinite? " + a.isInfinite());
-                }
-            }
+
+        }
     }
 }

@@ -16,11 +16,9 @@ package lesson08.home05;
 13. Класс Solution менять нельзя.
 */
 
-public class Solution
-{
+public class Solution {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Computer computer = new Computer();
         if (isWork(computer.getKeyboard()) &&
                 isWork(computer.getMonitor()) &&
@@ -30,10 +28,8 @@ public class Solution
         }
     }
 
-    public static boolean isWork(CompItem item)
-    {
-        System.out.println(item.getName());
-        return item.getName() != null && item.getName().length() > 4;
-    }
+    public static boolean isWork(CompItem item) {
 
+        return false;
+    }
 }

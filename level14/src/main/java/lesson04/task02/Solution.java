@@ -12,87 +12,34 @@ import java.util.ArrayList;
 4. Вывести на экран cat.toString().
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //Add your code here
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String str = reader.readLine();
-        while(!str.isEmpty()){
-            System.out.println(CatFactory.getCatByKey(str));
-            str = reader.readLine();
-        }
 
     }
 
-    static class CatFactory
-    {
-
-        static Cat getCatByKey(String key)
-        {
+    static class CatFactory {
+        static Cat getCatByKey(String key) {
             Cat cat = null;
-            if ("vaska".equals(key))
-            {
-                cat = new MaleCat("Василий");
-            } else if ("murka".equals(key))
-            {
-                cat = new FemaleCat("Мурочка");
-            } else if ("kiska".equals(key))
-            {
-                cat = new FemaleCat("Кисюлька");
-            } else
-            {
-                cat = new Cat(key);
-            }
+
 
             return cat;
         }
     }
 
-    static class Cat
-    {
+    static class Cat {
         private String name;
 
-        protected Cat(String name)
-        {
-            this.name = name;
-        }
 
-        public String getName()
-        {
-            return this.name;
-        }
-
-        public String toString()
-        {
-            return "Я уличный кот " + getName();
-        }
     }
 
-    static class MaleCat extends Cat
-    {
-        MaleCat(String name)
-        {
-            super(name);
-        }
+    static class MaleCat extends Cat {
 
-        public String toString()
-        {
-            return "Я - солидный кошак по имени " + getName();
-        }
     }
 
-    static class FemaleCat extends Cat
-    {
-        FemaleCat(String name)
-        {
-            super(name);
-        }
+    static class FemaleCat extends Cat {
 
-        public String toString()
-        {
-            return "Я - милая кошечка по имени " + getName();
-        }
     }
 }

@@ -7,10 +7,8 @@ package lesson08.home04;
 2. Метод main менять нельзя.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Object obj = new Circle();
         Movable movable = (Movable) obj;
         Drawable drawable = new Rectangle();
@@ -19,54 +17,31 @@ public class Solution
         printMainInfo(movable);
     }
 
-    public static void printMainInfo(Object object)
-    {
+    public static void printMainInfo(Object object) {
         //Add your code here
-        if (object instanceof Drawable)
-        {
-            ((Drawable) object).draw();
-        }
-        else if (object instanceof Movable) {
-            ((Movable) object).move();
-        }
+
 
     }
-    static interface Movable
-    {
+    static interface Movable {
 
-        void move();
-    }
-
-    static class Circle implements Movable
-    {
-
-        public void draw()
-        {
-            System.out.println("can be drawn");
-        }
-
-        public void move()
-        {
-            System.out.println("can be moved");
-        }
 
     }
 
-    static interface Drawable
-    {
+    static class Circle implements Movable {
+
+
+
+    }
+
+    static interface Drawable {
         void draw();
     }
 
-    static class Rectangle implements Drawable
-    {
-        public void draw()
-        {
-            System.out.println("can be drawn");
-        }
+    static class Rectangle implements Drawable {
 
-        public void move()
-        {
-            System.out.println("can be moved");
+        @Override
+        public void draw() {
+
         }
     }
 }

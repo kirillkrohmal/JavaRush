@@ -8,10 +8,8 @@ package lesson04.task03;
 5. В методе selectableMethods вызови методы onSelect, eat, если это возможно.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Food food = new Food();
         Selectable selectable = new Food();
         Food newFood = (Food) selectable;
@@ -20,26 +18,22 @@ public class Solution
         selectableMethods(selectable);
     }
 
-    public static void foodMethods(Food food)
-    {
+    public static void foodMethods(Food food) {
         //тут добавьте вызов методов для переменной food
         food.onSelect();
         food.eat();
     }
 
-    public static void selectableMethods(Selectable selectable)
-    {
+    public static void selectableMethods(Selectable selectable) {
         //тут добавьте вызов методов для переменной selectable
         selectable.onSelect();
     }
 
-    interface Selectable
-    {
+    interface Selectable {
         void onSelect();
     }
 
-    static class Food implements Selectable
-    {
+    static class Food implements Selectable {
         public void eat()
         {
             System.out.println("food is eaten");
