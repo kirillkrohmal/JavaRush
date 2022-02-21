@@ -4,11 +4,9 @@ package lesson02.task05;
 Исправь 4 ошибки в программе, чтобы она компилировалась.
 */
 
-public class Solution
-{
+public class Solution {
 
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
 
         System.out.println(Dream.HOBBIE.toString());
         System.out.println(new Hobbie().toString());

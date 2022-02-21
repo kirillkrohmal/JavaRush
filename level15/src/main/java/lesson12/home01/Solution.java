@@ -16,27 +16,11 @@ import java.util.ArrayList;
 */
 
 public class Solution {
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         //напиште тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String word;
-        ArrayList<String> list = new ArrayList<String>();
-        while (true)
-        {
-            word = reader.readLine();
-            if (word.equals("exit")) break;
-            try
-            {
-                if (word.contains(".")) print(Double.parseDouble(word));
-                else if (Integer.parseInt(word) >= 128) print(Integer.parseInt(word));
-                else if (Integer.parseInt(word) > 0 && Integer.parseInt(word) < 128) print(Short.parseShort(word));
-                else print(Integer.parseInt(word));
-            }
-            catch (NumberFormatException e) {
-                print(word);
-            }
-        }
+
+
     }
 
     public static void print(Double value) {

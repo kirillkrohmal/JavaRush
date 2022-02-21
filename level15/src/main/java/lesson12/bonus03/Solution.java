@@ -18,17 +18,12 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int input = Integer.parseInt(reader.readLine());
-        reader.close();
-        if (input <= 150)
-        System.out.println(factorial(input));
+
     }
 
     public static String factorial(int n) {
         //add your code here
-        if (n < 0) return "0";
-        BigInteger ret = BigInteger.ONE;
-        for (int i = 1; i <= n; ++i) ret = ret.multiply(BigInteger.valueOf(i));
-        return String.valueOf(ret);
+
+        return null;
     }
 }
