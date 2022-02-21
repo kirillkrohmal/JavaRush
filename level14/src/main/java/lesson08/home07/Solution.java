@@ -26,24 +26,39 @@ public class Solution {
 
     public static void cleanAllApartaments(List<Apartament> apartaments) {
         //написать тут вашу реализацию пунктов 1-4
-
+        for (Apartament apartament : apartaments) {
+            if (apartament instanceof Apt1Room) {
+                ((Apt1Room) apartament).clean1Room();
+            } else if (apartament instanceof Apt2Room) {
+                ((Apt2Room) apartament).clean2Rooms();
+            } else if (apartament instanceof Apt3Room) {
+                ((Apt3Room) apartament).clean3Rooms();
+            }
+        }
     }
 
-    static interface Apartament {
-    }
-
-    static class Apt1Room implements Apartament
+    static interface Apartament
     {
-
     }
 
-    static class Apt2Room implements Apartament
-    {
-
+    static class Apt1Room implements Apartament {
+        void clean1Room()
+        {
+            System.out.println("1 room is cleaned");
+        }
     }
 
-    static class Apt3Room implements Apartament
-    {
+    static class Apt2Room implements Apartament {
+        void clean2Rooms()
+        {
+            System.out.println("2 rooms are cleaned");
+        }
+    }
 
+    static class Apt3Room implements Apartament {
+        void clean3Rooms()
+        {
+            System.out.println("3 rooms are cleaned");
+        }
     }
 }
