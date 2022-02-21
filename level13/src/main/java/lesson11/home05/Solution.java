@@ -7,26 +7,21 @@ package lesson11.home05;
 4. Подумай, что должен возвращать метод initializeIdAndName в классе User.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         System.out.println(Matrix.NEO);
     }
 
 
-    static class Matrix
-    {
+    static class Matrix {
        public static DBObject NEO = new User().initializeIdAndName(1, "Neo");
     }
 
-    interface DBObject
-    {
+    interface DBObject {
         DBObject initializeIdAndName(long id, String name);
     }
 
-    static class User implements DBObject
-    {
+    static class User implements DBObject {
         long id;
         String name;
 
@@ -51,8 +46,5 @@ public class Solution
         {
             return String.format("User has name %s, id = %d", name, id);
         }
-
-
     }
-
 }

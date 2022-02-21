@@ -27,7 +27,7 @@ public class Solution {
         // напишите тут ваш код
         Scanner sr = new Scanner(System.in);
 
-        System.out.print("Введите челое число -> ");
+        System.out.print("Введите целое число -> ");
 
         if(sr.hasNextInt()) {
             int number = sr.nextInt();

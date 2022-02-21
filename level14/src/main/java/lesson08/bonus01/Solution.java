@@ -9,12 +9,10 @@ import java.util.List;
 Первое исключение уже реализовано в методе initExceptions.
 */
 
-public class Solution
-{
+public class Solution {
     public static List<Exception> exceptions = new ArrayList<Exception>();
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         initExceptions();
 
         for (Exception exception : exceptions)
@@ -23,11 +21,9 @@ public class Solution
         }
     }
 
-    private static void initExceptions()
-    {   //it's first exception
+    private static void initExceptions() {   //it's first exception
         int j =0 ;
-        while (j < 10)
-        {
+        while (j < 10) {
             try
             {
                 float i = 1 / 0;
@@ -39,9 +35,5 @@ public class Solution
             }
             j++;
         }
-        //Add your code here
-
-
-
     }
 }

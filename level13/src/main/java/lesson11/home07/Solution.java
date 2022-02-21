@@ -6,15 +6,12 @@ package lesson11.home07;
 3. Программа должна компилироваться.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
        SimpleObject<String> stringObject = new StringObject<Object>();
     }
 
-    interface SimpleObject<T>
-    {
+    interface SimpleObject<T> {
         SimpleObject<T> getInstance();
     }
     public static class StringObject <Object> implements SimpleObject <String> {
@@ -25,5 +22,4 @@ public class Solution
             return null;
         }
     }
-
 }

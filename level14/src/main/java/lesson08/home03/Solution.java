@@ -31,13 +31,36 @@ public class Solution {
         while (true) {
             key = reader.readLine();
 
-
+            if (key.equals("user")) {
+                person = new Person.User();
+            } else if (key.equals("looser")) {
+                person = new Person.Looser();
+            } else if (key.equals("coder")) {
+                person = new Person.Coder();
+            } else if (key.equals("proger")) {
+                person = new Person.Proger();
+            }
+            if (!key.equals("user") && !key.equals("looser") && !key.equals("coder") && !key.equals("proger")) break;
+            doWork(person); //вызываем doWork
 
         }
     }
 
-    public static void doWork(Person person) {
+    public static void doWork(Person person)
+    {
         // пункт 3
-
+        if (person instanceof Person.User) {
+            ((Person.User) person).live();
+        }
+        else if (person instanceof Person.Coder) {
+            ((Person.Coder) person).coding();
+        }
+        else if (person instanceof Person.Looser) {
+            ((Person.Looser) person).doNothing();
+        }
+        else if (person instanceof Person.Proger) {
+            ((Person.Proger) person).enjoy();
+        }
     }
 }
+

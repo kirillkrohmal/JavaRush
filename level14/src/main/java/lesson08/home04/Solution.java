@@ -19,29 +19,49 @@ public class Solution {
 
     public static void printMainInfo(Object object) {
         //Add your code here
-
-
-    }
-    static interface Movable {
-
-
-    }
-
-    static class Circle implements Movable {
-
-
+        if (object instanceof Drawable) {
+            ((Drawable) object).draw();
+        } else if (object instanceof Movable) {
+            ((Movable) object).move();
+        }
 
     }
+    static interface Movable
+    {
 
-    static interface Drawable {
+        void move();
+    }
+
+    static class Circle implements Movable
+    {
+
+        public void draw()
+        {
+            System.out.println("can be drawn");
+        }
+
+        public void move()
+        {
+            System.out.println("can be moved");
+        }
+
+    }
+
+    static interface Drawable
+    {
         void draw();
     }
 
-    static class Rectangle implements Drawable {
+    static class Rectangle implements Drawable
+    {
+        public void draw()
+        {
+            System.out.println("can be drawn");
+        }
 
-        @Override
-        public void draw() {
-
+        public void move()
+        {
+            System.out.println("can be moved");
         }
     }
 }
