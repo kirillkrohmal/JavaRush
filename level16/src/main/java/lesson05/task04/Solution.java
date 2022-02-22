@@ -20,6 +20,7 @@ public class Solution {
             start();
         }
 
+        @Override
         public void run() {
             System.out.println(getName() + " starts eating");
             eating();

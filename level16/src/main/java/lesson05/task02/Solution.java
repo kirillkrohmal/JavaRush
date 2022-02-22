@@ -25,12 +25,14 @@ public class Solution {
         int countFinished = 0;
         //add your implementation here - добавь свою реалзацию тут
         for (int i = 0; i < horses.size(); i++) {
-            if (horses.get(i).isFinished) countFinished++;
-            else if (!horses.get(i).isFinished) {
+            if (horses.get(i).isFinished) {
+                countFinished++;
+            } else if(!horses.get(i).isFinished) {
                 System.out.println("Waiting for " + horses.get(i).getName());
                 horses.get(i).join();
             }
         }
+
         return countFinished;
     }
 

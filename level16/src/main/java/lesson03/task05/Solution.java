@@ -35,12 +35,12 @@ public class Solution {
         }
 
         @Override
-        public void run()
-        {
+        public void run() {
             startPlaying();
             sleepNSeconds(1);
             stopPlaying();
             System.out.println("Playing " + delay + " ms");
+
         }
     }
 

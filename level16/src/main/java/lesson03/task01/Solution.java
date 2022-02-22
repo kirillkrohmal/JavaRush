@@ -10,11 +10,9 @@ public class Solution {
         new Thread(task).start();
     }
     public static class TestThread implements Runnable {
-
         @Override
-        public void run()
-        {
-            System.out.println("My first thread");
+        public void run() {
+
         }
     }
 }
