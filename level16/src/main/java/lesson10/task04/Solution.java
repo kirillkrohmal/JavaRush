@@ -25,7 +25,6 @@ public class Solution {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
                 }
-
             }
         }
     }

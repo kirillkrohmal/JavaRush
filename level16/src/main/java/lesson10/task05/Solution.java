@@ -22,8 +22,7 @@ public class Solution {
         Thread.sleep(3000);
         ourInterruptMethod();
     }
-    public static void ourInterruptMethod()
-    {
+    public static void ourInterruptMethod() {
         //add your code here - добавь код тут
         for (int i = 0; i < threads.size(); i++) {
             threads.get(i).interrupt();

@@ -20,6 +20,7 @@ import java.util.List;
 
 public class Solution {
     public static List<Thread> threads = new ArrayList<Thread>(5);
+
     static {
         threads.add(new FirstThread());
         threads.add(new SecondThread());
@@ -28,19 +29,16 @@ public class Solution {
         threads.add(new FivethThread());
 
     }
-    private static void sleep()
-    {
-        try
-        {
+
+    private static void sleep() {
+        try {
             Thread.sleep(100);
-        }
-        catch (InterruptedException e)
-        {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Thread thread2 = threads.get(1);
         thread2.start();
@@ -58,80 +56,34 @@ public class Solution {
 
     public static class FirstThread extends Thread {
 
-        @Override
-        public void run()
-        {
-            while (true) {
-            }
-        }
+
     }
+
     public static class SecondThread extends Thread {
 
-        @Override
-        public void run()
-        {
 
-            try {
-                while (!isInterrupted()) {}
-                throw new InterruptedException();
-            }
-            catch (InterruptedException e) {
-                System.out.println("InterruptedException");
-            }
-        }
     }
+
     public static class ThirdThread extends Thread {
 
-        @Override
-        public void run()
-        {
-            while (true) {
-                try
-                {
-                    System.out.println("Ура");
-                    Thread.sleep(500);
-                }
-                catch (InterruptedException e)
-                {}
-            }
-        }
+
     }
+
     public static class FourthThread extends Thread implements Message {
 
-        @Override
-        public  void showWarning()
-        {
-
-            this.interrupt();
-            try
-            {
-                this.join();
-            }
-            catch(Exception e)
-            {
-
-            }
-
-        }
 
         @Override
-        public void run()
-        {
-            Thread current = Thread.currentThread();
-            while(!current.interrupted())
-            {
-
-            }
-
+        public void showWarning() {
 
         }
     }
+
     public static class FivethThread extends Thread {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         @Override
-        public void run()
-        {
+        public void run() {
             int sum = 0;
             try {
                 while (!isInterrupted()) {
@@ -149,4 +101,5 @@ public class Solution {
         }
     }
 }
+
 

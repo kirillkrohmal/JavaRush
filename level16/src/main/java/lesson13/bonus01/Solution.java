@@ -6,7 +6,8 @@ import lesson13.bonus01.common.ImageTypes;
 
 /* Factory method pattern
 1. Внимательно посмотри, какие классы у тебя есть.
-2. В отдельных файлах в пакете common создай классы JpgReader, PngReader, BmpReader, которые реализуют интерфейс ImageReader.
+2. В отдельных файлах в пакете common создай классы JpgReader, PngReader, BmpReader, которые
+реализуют интерфейс ImageReader.
 3. В отдельном файле в пакете bonus01 создай класс ImageReaderFactory с одним методом.
 3.1. Подумай, как он должен называться.
 3.2. Подумай, какие модификаторы должны быть у этого метода.

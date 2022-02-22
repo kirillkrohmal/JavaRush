@@ -44,9 +44,10 @@ public class Solution {
     }
 
     public static class OurUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler {
+
         @Override
         public void uncaughtException(Thread t, Throwable e) {
-            System.out.println(t.getName() + ": " + e.getMessage());
+            System.out.println(t.getName() + " - " + e.getMessage());
         }
     }
 }
