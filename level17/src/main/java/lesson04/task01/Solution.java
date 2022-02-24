@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /* Синхронизированные заметки
-1. Класс Note будет использоваться нитями. Поэтому сделай так, чтобы обращения к листу notes блокировали мютекс notes, не this
-2. Все System.out.println не должны быть заблокированы (синхронизированы), т.е. не должны находиться в блоке synchronized
+1. Класс Note будет использоваться нитями. Поэтому сделай так, чтобы обращения к листу notes блокировали
+мютекс notes, не this
+2. Все System.out.println не должны быть заблокированы (синхронизированы), т.е. не должны находиться в
+блоке synchronized
 */
 
 public class Solution {
@@ -13,13 +15,14 @@ public class Solution {
 
         public final List<String> notes = new ArrayList<String>();
 
-        public void addNote(int index, String note)
-        {
+        public void addNote(int index, String note) {
             System.out.println("Сейчас будет добавлена заметка [" + note + "] На позицию " + index);
             synchronized (notes)
+
             {
                 notes.add(index, note);
             }
+
             System.out.println("Уже добавлена заметка [" + note + "]");
         }
 

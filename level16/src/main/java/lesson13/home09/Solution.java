@@ -40,22 +40,22 @@ public class Solution {
     }
 
     public static class Read3Strings extends Thread {
-        String result1 = "";
-        String result2 = "";
-        String result3 = "";
+        String s1 = "";
+        String s2 = "";
+        String s3 = "";
+
         public void run() {
             try {
-                result1 = reader.readLine();
-                result2 = reader.readLine();
-                result3 = reader.readLine();
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
+                s1 = reader.readLine();
+                s2 = reader.readLine();
+                s3 = reader.readLine();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
             }
         }
+
         public String toString() {
-            return result1 + " " + result2 + " " + result3;
+            return s1 + " " + s2 + " " + s3;
         }
     }
 }

@@ -57,25 +57,21 @@ public class Solution {
 
         void start();
     }
-    static class ReadFileThread extends Thread implements ReadFileInterface{
-
+    static class ReadFileThread extends Thread implements ReadFileInterface {
 
         @Override
-        public void setFileName(String fullFileName)
-        {
+        public void setFileName(String fullFileName) {
             firstFileName = fullFileName;
         }
 
         @Override
-        public String getFileContent()
-
-        {
+        public String getFileContent() {
             String fileContent = "";
-            try{
+            try {
                 Scanner fileReader = new Scanner(new File(firstFileName));
                 while (fileReader.hasNext()) fileContent+=fileReader.nextLine() + " ";
                 fileReader.close();
-            }catch (Exception e){}
+            } catch (Exception e){}
 
             return fileContent;
         }
