@@ -39,15 +39,12 @@ public class Solution {
         System.out.println(t2);
     }
 
-    public static class Read3Strings extends Thread
-    {
+    public static class Read3Strings extends Thread {
         String result1 = "";
         String result2 = "";
         String result3 = "";
-        public void run()
-        {
-            try
-            {
+        public void run() {
+            try {
                 result1 = reader.readLine();
                 result2 = reader.readLine();
                 result3 = reader.readLine();

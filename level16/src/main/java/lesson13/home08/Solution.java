@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /* Кто первый встал - того и тапки
 1. Разберись, что делает программа.
@@ -17,7 +18,7 @@ import java.util.List;
 */
 
 public class Solution {
-    public static volatile byte countReadStrings;
+    public static volatile AtomicInteger countReadStrings = new AtomicInteger(0);
     public static volatile BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
@@ -29,7 +30,11 @@ public class Solution {
         ReaderThread consolReader2 = new ReaderThread();
         ReaderThread consolReader3 = new ReaderThread();
 
-        while (count > countReadStrings) {
+        consolReader1.start();
+        consolReader2.start();
+        consolReader3.start();
+
+        while (count > countReadStrings.get()) {
         }
 
         consolReader1.interrupt();
@@ -45,29 +50,21 @@ public class Solution {
     public static class ReaderThread extends Thread {
         private List<String> result = new ArrayList<String>();
 
-        public ReaderThread() {
-            start();
-        }
-
         public void run() {
-                try
-                {
-                    while (!isInterrupted())
-                    {
+            try{
+                while (!isInterrupted()){
+                    while (reader.ready()){
                         result.add(reader.readLine());
-                        countReadStrings++;
+                        countReadStrings.incrementAndGet();
                     }
                 }
-                catch (IOException e)
-                {
-                }
 
-            }
+            }catch (Exception e){}
+        }
 
         @Override
         public String toString() {
-            String s = result.toString();
-            return s.substring(1, s.length()-1);
+            return result.toString();
         }
     }
 }

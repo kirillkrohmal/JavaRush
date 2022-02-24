@@ -2,7 +2,8 @@ package lesson13.home06;
 
 /* Создание по образцу
 Разберись, как работает программа.
-По образу и подобию CountDownRunnable создай нить CountUpRunnable, которая выводит значения в нормальном порядке - от 1 до number
+По образу и подобию CountDownRunnable создай нить CountUpRunnable, которая
+выводит значения в нормальном порядке - от 1 до number
 */
 
 public class Solution {
@@ -26,18 +27,18 @@ public class Solution {
             try {
                 while (true) {
                     System.out.println(toString());
-                    countIndexUp += 1;
-                    if (countIndexUp == Solution.number+1) return;
+                    countIndexUp++;
+                    if (countIndexUp == Solution.number) return;
                     Thread.sleep(500);
                 }
             } catch (InterruptedException e) {
-            }
         }
+    }
 
         public String toString() {
             return t.getName() + ": " + countIndexUp;
         }
-        }
+    }
 
     public static class CountDownRunnable implements Runnable {
         private int countIndexDown = Solution.number;

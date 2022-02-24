@@ -31,12 +31,13 @@ public class Solution {
 
         @Override
         public void run() {
-            if(countCreatedThreads < Solution.count) {
+            if (countCreatedThreads < Solution.count) {
                 System.out.println(new GenerateThread());
             }
         }
+
         public String toString() {
-            return this.getName() + " created";
+            return this.getName() + "created";
         }
     }
 }
