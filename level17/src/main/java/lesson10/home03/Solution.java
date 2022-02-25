@@ -6,8 +6,10 @@ import java.util.List;
 /* Аптека
 Реализуй интерфейс Runnable в классах Apteka и Person.
 Все нити должны работать пока не isStopped
-Логика для Apteka: drugsController должен сделать закупку случайного лекарства (getRandomDrug) в количестве (getRandomCount) и подождать 300 мс
-Логика для Person: drugsController должен сделать продажу случайного лекарства (getRandomDrug) в количестве (getRandomCount) и подождать 100 мс
+Логика для Apteka: drugsController должен сделать закупку случайного лекарства (getRandomDrug) в
+количестве (getRandomCount) и подождать 300 мс
+Логика для Person: drugsController должен сделать продажу случайного лекарства (getRandomDrug) в
+количестве (getRandomCount) и подождать 100 мс
 Расставь synchronized там, где это необходимо
 */
 

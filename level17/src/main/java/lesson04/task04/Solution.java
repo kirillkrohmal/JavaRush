@@ -8,19 +8,13 @@ package lesson04.task04;
 
 public class Solution {
     public static class OurPresident {
-
-
-
         private static OurPresident president;
 
         private OurPresident() {
         }
 
         static {
-            synchronized (OurPresident.class) {
-                president = new OurPresident();
-            }
-
+            president = new OurPresident();
         }
         public static OurPresident getOurPresident() {
             return president;

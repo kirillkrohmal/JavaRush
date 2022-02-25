@@ -19,11 +19,17 @@ public class Solution {
 
         public final List<String> fruits = new ArrayList<String>();
         public final List<String> vegetables = new ArrayList<String>();
-        public synchronized void addFruit(int index, String fruit) {fruits.add(index, fruit); }
+        public synchronized void addFruit(int index, String fruit) {
+            fruits.add(index, fruit);
+        }
         public synchronized void removeFruit (int index) {
             String remove = fruits.remove(index);
         }
-        public synchronized void addVegetable (int index, String vegetable) { vegetables.add(index, vegetable); }
-        public synchronized void removeVegetable (int index) { String remove = vegetables.remove(index); }
+        public synchronized void addVegetable (int index, String vegetable) {
+            vegetables.add(index, vegetable);
+        }
+        public synchronized void removeVegetable (int index) {
+            String remove = vegetables.remove(index);
+        }
     }
 }

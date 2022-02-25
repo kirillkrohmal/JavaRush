@@ -11,7 +11,8 @@ import java.util.Scanner;
 1. Считать с консоли 2 имени файла
 2. Считать построчно данные из файлов. Из первого файла - в allLines, из второго - в forRemoveLines
 В методе joinData:
-3. Если список allLines содержит все строки из forRemoveLines, то удалить из списка allLines все строки, которые есть в forRemoveLines
+3. Если список allLines содержит все строки из forRemoveLines, то удалить из списка allLines все строки,
+которые есть в forRemoveLines
 4. Если список allLines НЕ содержит каких-либо строк, которые есть в forRemoveLines, то
 4.1. очистить allLines от данных
 4.2. выбросить исключение CorruptedDataException
@@ -62,9 +63,6 @@ public class Solution {
                 allLines.clear();
                 throw  new CorruptedDataException();
             }
-
         }
     }
-
-
 }

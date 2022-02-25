@@ -4,7 +4,8 @@ package lesson04.task05;
 Singleton паттерн - синхронизация в методе
 IMF - это Международный Валютный Фонд
 Внутри метода getFund создайте синхронизированный блок
-Внутри синхронизированного блока инициализируйте переменную imf так, чтобы метод getFund всегда возвращал один и тот же объект
+Внутри синхронизированного блока инициализируйте переменную imf так, чтобы метод getFund всегда возвращал
+один и тот же объект
 */
 
 public class Solution {
@@ -16,8 +17,7 @@ public class Solution {
             //add your code here - добавь код тут
             if (imf == null)
             synchronized (IMF.class) {
-                if (imf == null)
-                    imf = new IMF();
+                imf = new IMF();
             }
             return imf;
         }
