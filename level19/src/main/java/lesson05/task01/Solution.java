@@ -7,22 +7,26 @@ package lesson05.task01;
 */
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Solution {
-    public static void main(String[] args) throws IOException{
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        FileInputStream in = new FileInputStream(reader.readLine());
-        FileOutputStream out = new FileOutputStream(reader.readLine());
-        while (in.available() > 0) {
-            byte[] buffer = new byte[in.available()];
-            in.read(buffer);
-            for (int i = 0; i < buffer.length; i++)
-            {
-                if (i % 2 != 0) out.write(buffer[i]);
-            }
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        FileReader reader = new FileReader(scanner.nextLine());
+        FileWriter writer = new FileWriter(scanner.nextLine());
+        ArrayList<Integer> bytes = new ArrayList<>();
+        while (reader.ready()) { //пока есть непрочитанные байты в потоке ввода
+            bytes.add(reader.read()); //читаем один символ (char будет расширен до int)
         }
+        Integer[] x = bytes.toArray(new Integer[bytes.size()]);
+        for (int i = 0; i < x.length; i++) {
+            int a = x[i];
+            if (i % 2 != 0) writer.write(a);
+        }
+        //закрываем потоки после использования
         reader.close();
-        in.close();
-        out.close();
+        writer.close();
+        scanner.close();
     }
 }

@@ -1,7 +1,8 @@
 package lesson03.task02;
 
 /* Адаптер
-Используйте класс AdapterFileOutputStream, чтобы адаптировать FileOutputStream к новому интерфейсу AmigoStringWriter
+Используйте класс AdapterFileOutputStream, чтобы адаптировать
+FileOutputStream к новому интерфейсу AmigoStringWriter
 */
 
 import java.io.FileOutputStream;
