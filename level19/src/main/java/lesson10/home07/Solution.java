@@ -15,8 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(args[0]));
         BufferedWriter writer = new BufferedWriter(new FileWriter(args[1]));
         List<String> lines_File = new ArrayList<String>();

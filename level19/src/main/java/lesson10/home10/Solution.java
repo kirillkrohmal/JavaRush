@@ -18,7 +18,7 @@ public class Solution {
                 FileOutputStream outputStream = new FileOutputStream("c:/output.txt");
                 InputStream is = Solution.class.getClassLoader().getResourceAsStream("/user/resources/avatar.gif");
         ) {
-            ;
+
             byte[] b = new byte[is.available()];
             outputStream.write(is.read(b));
 

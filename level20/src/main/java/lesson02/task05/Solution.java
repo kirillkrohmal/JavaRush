@@ -10,8 +10,10 @@ import java.io.*;
 */
 public class Solution {
     public static void main(java.lang.String[] args) {
-        //you can find your_file_name.tmp in your TMP directory or fix outputStream/inputStream according to your real file location
-        //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
+        //you can find your_file_name.tmp in your TMP directory or fix outputStream/inputStream according to your
+        // real file location
+        //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии
+        // с путем к вашему реальному файлу
         try {
             File your_file_name = File.createTempFile("your_file_name", null);
             OutputStream outputStream = new FileOutputStream(your_file_name);
@@ -29,7 +31,8 @@ public class Solution {
 
 
             loadedObject.load(inputStream);
-            //check here that the object variable equals to loadedObject - проверьте тут, что object и loadedObject равны
+            //check here that the object variable equals to loadedObject - проверьте тут, что object и loadedObject
+            // равны
 
             outputStream.close();
             inputStream.close();

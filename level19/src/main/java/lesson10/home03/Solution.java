@@ -22,39 +22,34 @@ import java.util.*;
 */
 
 public class Solution {
-    public static final List<Person> PEOPLE = new ArrayList<Person>();
+    @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
+    private static final List<Person> PEOPLE = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
-        BufferedReader fileReader = new BufferedReader(new FileReader(args[0]));
-        String line = "";
-        List<String> file = new ArrayList<String>();
-        while ((line = fileReader.readLine()) != null) {
-            file.add(line);
+        String fileName = args[0];
+        String input;
+        ArrayList<String> fileList = new ArrayList<>();
+        BufferedReader fileReader = new BufferedReader(new FileReader(fileName));
+        while ((input = fileReader.readLine()) != null) {
+            fileList.add(input);
         }
         fileReader.close();
-        String name = "";
-        int index;
-        Date date;
-        for (String lines : file) {
-            String[] words = lines.split(" ");
-            index = words.length - 4;
-            Calendar calendar = new GregorianCalendar();
-            calendar.set(Integer.parseInt(words[words.length - 1]), Integer.parseInt(words[words.length - 2]) - 1,
-                    Integer.parseInt(words[words.length - 3]));
-            date = calendar.getTime();
-            name = getName(words, index);
-            name = name.substring(0, name.length() - 1);
-            PEOPLE.add(new Person(name, date));
+
+        for (String aFileList : fileList) {
+            String[] stringArray = aFileList.split(" ");
+            StringBuilder name = new StringBuilder();
+            for (int i = 0; i < stringArray.length - 3; i++) {
+                if (i == stringArray.length - 4) {
+                    name.append(stringArray[i]);
+                } else {
+                    name.append(stringArray[i]).append(" ");
+                }
+            }
+            int year = Integer.parseInt(stringArray[stringArray.length - 1]);
+            int month = Integer.parseInt(stringArray[stringArray.length - 2]) - 1;
+            int day = Integer.parseInt(stringArray[stringArray.length - 3]);
+            Date birthDay = new GregorianCalendar(year, month, day).getTime();
+            PEOPLE.add(new Person(name.toString(), birthDay));
         }
     }
-
-    public static String getName(String[] name, int index) {
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i <= index; i++)
-        {
-            builder.append(name[i]).append(" ");
-        }
-        return builder.toString();
-    }
-
 }
