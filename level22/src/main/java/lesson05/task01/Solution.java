@@ -1,6 +1,5 @@
 package lesson05.task01;
 
-import com.javarush.test.level22.lesson05.home01.TooShortStringFirstThreadException;
 
 /* Найти подстроку
 Метод getPartOfString должен возвращать подстроку начиная с символа после 1-го пробела и до конца слова,
@@ -11,37 +10,21 @@ import com.javarush.test.level22.lesson05.home01.TooShortStringFirstThreadExcept
 Сигнатуру метода getPartOfString не менять.
 */
 public class Solution {
-    public static String getPartOfString(String string) throws TooShortStringException {
-        if (string == null || string.isEmpty()) {
+    public static void main(String[] args) {
+        System.out.println(getPartOfString("JavaRush - лучший сервис обучения Java."));
+    }
+
+    public static String getPartOfString(String string) {
+        if (string == null || string.isEmpty())
             throw new TooShortStringException();
-        }
-        int firstSpace = string.indexOf(" ") + 1;
-        char[] chars = string.toCharArray();
-        int space = 0;
-        int lastSpace = 0;
-        for (int i = 0; i < string.length(); i++) {
-            if (chars[i] == ' ') {
-                space++;
-                if (space == 4) {
-                    lastSpace = string.length();
-                }
-                else if (space == 5) {
-                    lastSpace = i;
-                    break;
-                }
-            }
-        }
-        if (space < 4) throw new TooShortStringException();
-        string = string.substring(firstSpace, lastSpace);
-        return string;
+
+        String s[] = string.split(" ");
+        if (s.length<5)
+            throw new TooShortStringException();
+
+        return s[1] + " " + s[2] + " " + s[3] + " " + s[4];
     }
 
-    public static class TooShortStringException extends Throwable
-    {
-    }
-
-    public static void main(String[] args) throws  TooShortStringException
-    {
-        System.out.println(getPartOfString(null));
+    public static class TooShortStringException extends RuntimeException {
     }
 }
