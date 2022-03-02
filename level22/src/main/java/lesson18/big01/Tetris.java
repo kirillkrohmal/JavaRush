@@ -1,8 +1,8 @@
 package lesson18.big01;
 
 public class Tetris {
-    public Field field;
-    public Figure figure;
+    private Field field;
+    private Figure figure;
     public static Tetris game;
 
     public static void main(String[] args) {

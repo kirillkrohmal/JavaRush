@@ -1,7 +1,7 @@
 package lesson18.big01;
 
 /**
- * Клсс FigureFactory отвечает за создание объектов-фигурок.
+ * Класс FigureFactory отвечает за создание объектов-фигурок.
  */
 public class FigureFactory
 {
