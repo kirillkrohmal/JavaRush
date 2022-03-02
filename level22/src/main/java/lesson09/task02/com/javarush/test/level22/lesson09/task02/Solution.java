@@ -26,8 +26,7 @@ public class Solution {
         }
         return result;
     }
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", "Ivanov");
         params.put("country", "Ukraine");
