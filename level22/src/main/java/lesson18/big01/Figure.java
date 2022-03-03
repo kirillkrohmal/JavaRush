@@ -1,74 +1,41 @@
 package lesson18.big01;
 
-public class Figure {
-    int x;
-    int y;
-    int[][] matrix;
+public class Figure
+{
+    //метрица которая определяет форму фигурки: 1 - клетка не пустая, 0 - пустая
+    private int[][] matrix;
+    //координаты
+    private int x;
+    private int y;
 
-
-    public Figure(int x, int y, int[][] matrix) {
+    public Figure(int x, int y, int[][] matrix)
+    {
         this.x = x;
         this.y = y;
         this.matrix = matrix;
     }
 
-    public int getX() {
+    public int getX()
+    {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
+    public int getY()
+    {
         return y;
     }
 
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public int[][] getMatrix() {
+    public int[][] getMatrix()
+    {
         return matrix;
     }
 
-    public void setMatrix(int[][] matrix) {
-        this.matrix = matrix;
-    }
-
-    public void left() {
-        x--;
-        if (!isCurrentPositionAvailable()) {
-            x++;
-        }
-    }
-
-    public void right() {
-        x++;
-        if (!isCurrentPositionAvailable()) {
-            x--;
-        }
-    }
-
-    public void down() {
-        y--;
-    }
-
-    public void up() {
-        y++;
-    }
-
-    public void downMaximum()
+    /**
+     * Поворачаиваем фигурку.
+     * Для простоты - просто вокруг главной диагонали.
+     */
+    public void rotate()
     {
-        while (isCurrentPositionAvailable())
-        {
-            y++;
-        }
-
-        y--;
-    }
-
-    public void rotate() {
         int[][] matrix2 = new int[3][3];
 
         for (int i = 0; i < 3; i++)
@@ -82,8 +49,65 @@ public class Figure {
         matrix = matrix2;
     }
 
-    public boolean isCurrentPositionAvailable() {
+    /**
+     * Двигаем фигурку влево.
+     * Проверяем не вылезла ли она за границу поля и/или не залезла ли на занятые клетки.
+     */
+    public void left()
+    {
+        x--;
+        if (!isCurrentPositionAvailable())
+            x++;
+    }
 
+    /**
+     * Двигаем фигурку вправо.
+     * Проверяем не вылезла ли она за границу поля и/или не залезла ли на занятые клетки.
+     */
+    public void right()
+    {
+        x++;
+        if (!isCurrentPositionAvailable())
+            x--;
+    }
+
+    /**
+     * Двигаем фигурку вверх.
+     * Используется, если фигурка залезла на занятые клетки.
+     */
+    public void up()
+    {
+        y--;
+    }
+
+    /**
+     * Двигаем фигурку вниз.
+     */
+    public void down()
+    {
+        y++;
+    }
+
+    /**
+     * Двигаем фигурку вниз до тех пор, пока не залезем на кого-нибудь.
+     */
+    public void downMaximum()
+    {
+        while (isCurrentPositionAvailable())
+        {
+            y++;
+        }
+
+        y--;
+    }
+
+    /**
+     * Проверяем - может ли фигурка находится на текущей позици:
+     * а) не вылазиет ли она за границы поля
+     * б) не залазиет ли она на занятые клетки
+     */
+    public boolean isCurrentPositionAvailable()
+    {
         Field field = Tetris.game.getField();
 
         for (int i = 0; i < 3; i++)
@@ -105,7 +129,11 @@ public class Figure {
         return true;
     }
 
-    public void landed() {
+    /**
+     * Приземляем фигурку - добавляем все ее непустые клетки к клеткам поля.
+     */
+    public void landed()
+    {
         Field field = Tetris.game.getField();
 
         for (int i = 0; i < 3; i++)
@@ -118,4 +146,5 @@ public class Figure {
         }
     }
 }
+
 

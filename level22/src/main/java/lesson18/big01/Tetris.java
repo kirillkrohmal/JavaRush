@@ -2,39 +2,42 @@ package lesson18.big01;
 
 import java.awt.event.KeyEvent;
 
-public class Tetris {
-    private Field field;
-    private Figure figure;
-    public static Tetris game;
-    private boolean isGameOver;
+public class Tetris
+{
 
-    public static void main(String[] args) throws InterruptedException {
-        game = new Tetris(10, 20);
-        game.run();
+    private Field field;                //Поле с клетками
+    private Figure figure;              //Фигурка
+
+    private boolean isGameOver;         //Игра Окончена?
+
+    public Tetris(int width, int height)
+    {
+        field = new Field(width, height);
+        figure = null;
     }
 
-    public Tetris(int width, int height) {
-        this.field = new Field(width, height);
-        this.figure = null;
-    }
-
-    public Field getField() {
+    /**
+     * Геттер переменной field.
+     */
+    public Field getField()
+    {
         return field;
     }
 
-    public void setField(Field field) {
-        this.field = field;
-    }
-
-    public Figure getFigure() {
+    /**
+     * Геттер переменной figure.
+     */
+    public Figure getFigure()
+    {
         return figure;
     }
 
-    public void setFigure(Figure figure) {
-        this.figure = figure;
-    }
-
-    public void run() throws InterruptedException {
+    /**
+     *  Основной цикл программы.
+     *  Тут происходят все важные действия
+     */
+    public void run() throws Exception
+    {
         //Создаем объект "наблюдатель за клавиатурой" и стартуем его.
         KeyboardObserver keyboardObserver = new KeyboardObserver();
         keyboardObserver.start();
@@ -77,23 +80,45 @@ public class Tetris {
         System.out.println("Game Over");
     }
 
-    public void step() {
+    public void step()
+    {
+        //опускам фигурку вниз
         figure.down();
 
-        if(!figure.isCurrentPositionAvailable()) {
-            figure.up();
-            figure.landed();
+        //если разместить фигурку на текущем месте невозможно
+        if (!figure.isCurrentPositionAvailable())
+        {
+            figure.up();                    //поднимаем обратно
+            figure.landed();                //приземляем
 
-            isGameOver = figure.getY() <= 1;
+            isGameOver = figure.getY() <= 1;//если фигурка приземлилась на самом верху - игра окончена
 
-            field.removeFullLines();
+            field.removeFullLines();        //удаляем заполненные линии
 
-            figure = FigureFactory.createRandomFigure(field.getWidth() / 2, 0);
+            figure = FigureFactory.createRandomFigure(field.getWidth() / 2, 0); //создаем новую фигурку
         }
     }
 
-    public static Tetris game() {
+    /**
+     * Сеттер для figure
+     */
+    public void setFigure(Figure figure)
+    {
+        this.figure = figure;
+    }
 
-        return null;
+    /**
+     * Сеттер для field
+     */
+    public void setField(Field field)
+    {
+        this.field = field;
+    }
+
+    public static Tetris game;
+    public static void main(String[] args) throws Exception
+    {
+        game = new Tetris(10, 20);
+        game.run();
     }
 }
