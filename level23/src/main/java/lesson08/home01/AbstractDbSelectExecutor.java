@@ -1,6 +1,7 @@
 package lesson08.home01;
 
-import com.javarush.test.level23.lesson08.home01.vo.NamedItem;
+
+import lesson08.home01.vo.NamedItem;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
