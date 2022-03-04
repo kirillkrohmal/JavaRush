@@ -7,7 +7,8 @@ import lesson08.home01.vo.*;
 import java.util.List;
 
 /* Анонимность иногда так приятна!
-1. В пакете vo создайте public классы User, Location, Server, Subject, Subscription, которые наследуются от NamedItem
+1. В пакете vo создайте public классы User, Location, Server, Subject, Subscription, которые наследуются от
+NamedItem
 2. В классе Solution для каждого класса создайте свой метод, который возвращает список экземпляров класса.
 Например, для класса User это будет - public List<User> getUsers()
 Для класса Location это будет - public List<Location> getLocations()
@@ -74,9 +75,5 @@ public class Solution {
                 return "select * from SUBSCRIPTION";
             }
         }.execute();
-
-
-
     }
-
 }
