@@ -4,9 +4,27 @@ import java.util.ArrayList;
 
 public class Snake {
 
-    private ArrayList<SnakeSection> sections;
+    private ArrayList<SnakeSection> sections = new ArrayList<SnakeSection>();
     private boolean isAlive;
     private SnakeDirection direction;
+
+    public Snake(int x, int y) {
+        sections = new ArrayList<SnakeSection>();
+        sections.add(new SnakeSection(x, y));
+        isAlive = true;
+    }
+
+    public void move() {
+
+    }
+
+    public int getX() {
+        return sections.get(0).getX();
+    }
+
+    public int getY() {
+        return sections.get(0).getY();
+    }
 
     public ArrayList<SnakeSection> getSections() {
         return sections;
@@ -16,7 +34,7 @@ public class Snake {
         this.sections = sections;
     }
 
-    public boolean isValue() {
+    public boolean isAlive() {
         return isAlive;
     }
 
