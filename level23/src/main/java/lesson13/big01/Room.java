@@ -1,5 +1,7 @@
 package lesson13.big01;
 
+import java.util.ArrayList;
+
 public class Room {
     private int width;
     private int height;
@@ -49,7 +51,28 @@ public class Room {
     }
 
     public void print() {
+        int[][] matrix = new int[height][width];
 
+        ArrayList<SnakeSection> snakeSections = new ArrayList<>(snake.getSections());
+        for (SnakeSection snakeSection : snakeSections) {
+            matrix[snakeSection.getX()][snakeSection.getY()] = 1;
+        }
+
+        matrix[snake.getX()][snake.getY()] = snake.isAlive() ? 2 : 4;
+
+        matrix[mouse.getY()][mouse.getX()] = 3;
+
+        String[] symbols = {" . ", " x ", " X ", "^_^", "RIP"};
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                System.out.print(symbols[matrix[i][j]]);
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
     }
 
     public static Room game;
