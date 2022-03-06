@@ -1,8 +1,6 @@
 package lesson04.home01;
 
-import com.javarush.test.level24.lesson04.home01.HasHeight;
-import com.javarush.test.level24.lesson04.home01.HasWidth;
-import com.javarush.test.level24.lesson04.home01.Point;
+
 
 /* Рефакторинг
 В классе Rectangle:

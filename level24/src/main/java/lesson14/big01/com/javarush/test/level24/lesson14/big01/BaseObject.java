@@ -51,7 +51,7 @@ public abstract class BaseObject
     /**
      * Метод рисует свой объект на "канвасе".
      */
-    public abstract void draw(com.javarush.test.level24.lesson14.big01.Canvas canvas);
+    public abstract void draw(Canvas canvas);
 
     /**
      * Двигаем себя на один ход.
