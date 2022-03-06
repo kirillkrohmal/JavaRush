@@ -1,6 +1,6 @@
 package lesson14.big01.com.javarush.test.level24.lesson14.big01;
 
-public class BaseObject {
+public abstract class BaseObject {
     double x;
     double y;
     double radius;
@@ -33,5 +33,14 @@ public class BaseObject {
 
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+    abstract void draw();
+
+    abstract void move();
+
+    public boolean isIntersec(BaseObject o) {
+
+        return false;
     }
 }
