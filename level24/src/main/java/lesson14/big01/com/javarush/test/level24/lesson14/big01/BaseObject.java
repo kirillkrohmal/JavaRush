@@ -35,12 +35,12 @@ public abstract class BaseObject {
         this.radius = radius;
     }
 
-    abstract void draw();
-
-    abstract void move();
-
     public boolean isIntersec(BaseObject o) {
 
         return false;
     }
+
+    public abstract void draw(Canvas canvas);
+
+    public abstract void move();
 }
