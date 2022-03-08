@@ -43,4 +43,12 @@ public abstract class BaseObject {
     public abstract void draw(Canvas canvas);
 
     public abstract void move();
+
+    public void checkBorders(double minx, double maxx, double miny, double maxy)
+    {
+        if (x < minx) x = minx;
+        if (x > maxx) x = maxx;
+        if (y < miny) y = miny;
+        if (y > maxy) y = maxy;
+    }
 }
