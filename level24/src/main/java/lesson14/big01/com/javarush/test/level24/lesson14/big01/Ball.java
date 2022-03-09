@@ -1,12 +1,23 @@
 package lesson14.big01.com.javarush.test.level24.lesson14.big01;
 
-public class Ball extends BaseObject {
+import lesson14.big01.com.javarush.test.level24.lesson14.big01.Canvas;
+import com.javarush.test.level24.lesson14.big01.Arcanoid;
+import com.javarush.test.level24.lesson14.big01.BaseObject;
+/**
+ * Класс для шарика в игре
+ */
+public class Ball extends BaseObject
+{
+    //скорость
     private double speed;
+    //направление  (в градусах от 0 до 360)
     private double direction;
 
+    //текущее значение вектора движения (dx,dy)
     private double dx;
     private double dy;
 
+    //заморожен ли объект или может двигаться
     private boolean isFrozen;
 
     public Ball(double x, double y, double speed, double direction)
@@ -19,18 +30,36 @@ public class Ball extends BaseObject {
         this.isFrozen = true;
     }
 
-    public double getSpeed() {
+    public double getSpeed()
+    {
         return speed;
     }
 
-    public void setSpeed(double speed) {
+    public void setSpeed(double speed)
+    {
         this.speed = speed;
     }
 
-    public double getDirection() {
+    public double getDirection()
+    {
         return direction;
     }
 
+    public double getDx()
+    {
+        return dx;
+    }
+
+    public double getDy()
+    {
+        return dy;
+    }
+
+    /**
+     * Устанавливаем новое направление движения.
+     * Тут же вычисляем и новый вектор.
+     * Тако подход удобно использовать при отскоках от стен.
+     */
     public void setDirection(double direction)
     {
         this.direction = direction;
@@ -40,45 +69,32 @@ public class Ball extends BaseObject {
         dy = -Math.sin(angel) * speed;
     }
 
-    public double getDx() {
-        return dx;
-    }
-
-    public void setDx(double dx) {
-        this.dx = dx;
-    }
-
-    public double getDy() {
-        return dy;
-    }
-
-    public void setDy(double dy) {
-        this.dy = dy;
-    }
-
-    public boolean isFrozen() {
-        return isFrozen;
-    }
-
-    public void setFrozen(boolean frozen) {
-        isFrozen = frozen;
-    }
-
+    /**
+     * Рисуем себя на "канвасе".
+     */
     @Override
-    public void draw(Canvas canvas) {
+    public void draw(Canvas canvas)
+    {
         canvas.setPoint(x, y, 'O');
     }
 
-    @Override
-    public void move() {
-        if(isFrozen) return;
+    /**
+     * Двигаем себя на один шаг.
+     */
+    public void move()
+    {
+        if (isFrozen) return;
 
         x += dx;
         y += dy;
 
-        checkRebound(1, Arcanoid.game.getWidth(),1, Arcanoid.game.getHeight() + 5);
+        checkRebound(1, Arcanoid.game.getWidth(), 1, Arcanoid.game.getHeight() + 5);
     }
 
+    /**
+     * Проверяем не улетел ли шарик за стенку.
+     * Если да - отражаем его.
+     */
     public void checkRebound(int minx, int maxx, int miny, int maxy)
     {
         if (x < minx)
@@ -106,8 +122,13 @@ public class Ball extends BaseObject {
         }
     }
 
-
-    public void start() {
+    /**
+     * Запускам шарик.
+     * isFrozen = false.
+     * Пересчитываем вектор движения (dx,dy).
+     */
+    public void start()
+    {
         this.setDirection(direction);
         this.isFrozen = false;
     }

@@ -1,5 +1,8 @@
 package lesson14.big01.com.javarush.test.level24.lesson14.big01;
 
+import com.javarush.test.level24.lesson14.big01.BaseObject;
+import com.javarush.test.level24.lesson14.big01.Arcanoid;
+
 public class Stand  extends BaseObject {
 
     private static int[][] matrix = {
@@ -48,5 +51,4 @@ public class Stand  extends BaseObject {
     public void moveRight() {
         direction = 1;
     }
-
 }
