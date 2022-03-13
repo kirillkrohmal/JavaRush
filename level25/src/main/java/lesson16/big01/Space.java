@@ -16,6 +16,18 @@ public class Space {
         this.height = height;
     }
 
+    void run() {
+
+    }
+
+    void draw() {
+
+    }
+
+    void sleep(int ms) {
+
+    }
+
     public static void main(String[] args) {
 
     }
