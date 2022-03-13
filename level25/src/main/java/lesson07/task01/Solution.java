@@ -5,7 +5,8 @@ import java.io.InputStream;
 import java.net.Socket;
 
 /* Работать в поте лица!
-Реализуйте логику метода interrupt, который должен прерывать трэд предварительно закрыв используемые ресурсы
+Реализуйте логику метода interrupt, который должен прерывать трэд предварительно
+закрыв используемые ресурсы
 Используйте метод super-класса в блоке finally
 */
 public class Solution extends Thread {
@@ -23,9 +24,10 @@ public class Solution extends Thread {
         try {
             socket.close();
             in.close();
-        }
-        catch (IOException e) {}
-        Thread.interrupted();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } Thread.interrupted();
+
     }
 
     public void run() {

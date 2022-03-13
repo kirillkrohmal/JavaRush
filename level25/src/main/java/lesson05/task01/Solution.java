@@ -13,12 +13,12 @@ public class Solution {
     public static void processThreads(Thread... threads) {
         //implement this method - реализуйте этот метод
         for (Thread thread : threads) {
-            switch (thread.getState()) {
+            switch(thread.getState()) {
                 case NEW:
                     thread.start();
                     break;
                 case RUNNABLE:
-                    thread.isInterrupted();
+                    thread.interrupt();
                     break;
                 case BLOCKED:
                     thread.interrupt();
@@ -33,6 +33,7 @@ public class Solution {
                     System.out.println(thread.getPriority());
                     break;
             }
+
         }
     }
 }

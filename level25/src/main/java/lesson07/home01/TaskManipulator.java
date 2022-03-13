@@ -2,8 +2,8 @@ package lesson07.home01;
 
 public class TaskManipulator implements Runnable, CustomThreadManipulator {
     Thread current;
-    @Override
 
+    @Override
     public void run() {
         try {
             while (!current.isInterrupted())
