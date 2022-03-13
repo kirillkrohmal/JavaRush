@@ -15,7 +15,7 @@ public class SpaceShip extends BaseObject
     };
 
     //вектор движения (-1 влево,+1 вправо)
-    private double d,x = 0;
+    private double dx = 0;
 
     public SpaceShip(int x, int y)
     {
