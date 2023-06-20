@@ -16,21 +16,18 @@ import java.io.Reader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //Напишите тут ваш код
-
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String second1 = bufferedReader.readLine();
         String second2 = bufferedReader.readLine();
 
-        int one = Integer.parseInt(second1);
-        int two = Integer.parseInt(second2);
-
-        int m = 2;
-        int n = 4;
+        int m = Integer.parseInt(second1);
+        int n = Integer.parseInt(second2);
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-
+                System.out.print("8");
             }
+            System.out.println();
         }
     }
 }

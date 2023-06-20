@@ -10,14 +10,14 @@ IMF - это Международный Валютный Фонд
 
 public class Solution {
     public static class IMF {
-
         private static IMF imf;
 
         public static IMF getFund() {
             //add your code here - добавь код тут
-            if (imf == null)
             synchronized (IMF.class) {
-                imf = new IMF();
+                if (imf == null) {
+                    imf = new IMF();
+                }
             }
             return imf;
         }

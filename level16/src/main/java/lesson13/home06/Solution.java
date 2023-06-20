@@ -18,22 +18,21 @@ public class Solution {
     public static class CountUpRunnable extends  Thread {
         private int countIndexUp = 1;
         private Thread t;
-        public CountUpRunnable(String name)
-        {
+        public CountUpRunnable(String name) {
             t = new Thread(this, name);
             t.start();
         }
+
         public void run() {
             try {
                 while (true) {
                     System.out.println(toString());
-                    countIndexUp++;
-                    if (countIndexUp == Solution.number) return;
+                    countIndexUp += 1;
+                    if(countIndexUp == Solution.number + 1) return;
                     Thread.sleep(500);
                 }
-            } catch (InterruptedException e) {
+            } catch (InterruptedException e) {}
         }
-    }
 
         public String toString() {
             return t.getName() + ": " + countIndexUp;
@@ -46,15 +45,12 @@ public class Solution {
 
         public CountDownRunnable(String name) {
             t = new Thread(this, name);
-            t.start();
-            try
-            {
-                t.join();
-            }
-            catch (InterruptedException e)
-            {
 
-            }
+
+            t.start();
+            try {
+                t.join();
+            } catch (InterruptedException e) {}
         }
 
         public void run() {

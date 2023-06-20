@@ -41,10 +41,9 @@ public class Solution {
     private static void waiting() {
         //add your code here - добавь код тут
         try {
-            Thread.sleep(50);
-        }
-        catch (InterruptedException e)
-        {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -53,6 +52,7 @@ public class Solution {
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 

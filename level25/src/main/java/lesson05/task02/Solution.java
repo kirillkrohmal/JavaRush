@@ -26,17 +26,13 @@ public class Solution {
 
         @Override
         public void run() {
-            throw new NullPointerException("it's an example");
+
         }
         private class MyUncaughtExceptionHandler implements UncaughtExceptionHandler {
+
             @Override
             public void uncaughtException(Thread t, Throwable e) {
-                try {
-                    Thread.currentThread().sleep(500);
-                    System.out.println(String.format("%s, %s, %s", secretKey, t.getName(), e.getMessage()));
-                } catch (InterruptedException e1) {
-                    e1.printStackTrace();
-                }
+
             }
         }
     }

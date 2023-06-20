@@ -1,10 +1,11 @@
 package lesson15.big01.statistic;
 
-import com.javarush.test.level27.lesson15.big01.kitchen.Cook;
-import com.javarush.test.level27.lesson15.big01.statistic.event.CookedOrderEventDataRow;
-import com.javarush.test.level27.lesson15.big01.statistic.event.EventDataRow;
-import com.javarush.test.level27.lesson15.big01.statistic.event.EventType;
-import com.javarush.test.level27.lesson15.big01.statistic.event.VideoSelectedEventDataRow;
+
+
+import lesson15.big01.statistic.event.CookedOrderEventDataRow;
+import lesson15.big01.statistic.event.EventDataRow;
+import lesson15.big01.statistic.event.EventType;
+import lesson15.big01.statistic.event.VideoSelectedEventDataRow;
 
 import java.util.*;
 

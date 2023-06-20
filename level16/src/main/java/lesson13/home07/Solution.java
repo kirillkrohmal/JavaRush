@@ -70,14 +70,15 @@ public class Solution {
         @Override
         public void run() {
             try {
-                for (String i : OnlineGame.steps) {
-                    System.out.println(this.getName() + ":" + i);
-                    Thread.sleep(1000 / rating);
+
+                for (String o : OnlineGame.steps) {
+                    System.out.println(this.getName() + ":" + o);
+                    Thread.sleep(1000/rating);
                 }
                 OnlineGame.isWinnerFound = true;
-                System.out.println(getName() + ":победитель!");
+                System.out.println(this.getName() + ":победитель!");
             } catch (InterruptedException e) {
-                System.out.println(getName() + ":проиграл");
+                System.out.println(this.getName() + ":проиграл");
             }
         }
     }

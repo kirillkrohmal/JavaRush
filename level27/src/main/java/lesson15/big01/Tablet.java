@@ -1,9 +1,11 @@
 package lesson15.big01;
 
-import com.javarush.test.level27.lesson15.big01.ad.AdvertisementManager;
-import com.javarush.test.level27.lesson15.big01.ad.NoVideoAvailableException;
-import com.javarush.test.level27.lesson15.big01.kitchen.Order;
-import com.javarush.test.level27.lesson15.big01.kitchen.TestOrder;
+
+
+import lesson15.big01.ad.AdvertisementManager;
+import lesson15.big01.ad.NoVideoAvailableException;
+import lesson15.big01.kitchen.Order;
+import lesson15.big01.kitchen.TestOrder;
 
 import java.io.IOException;
 import java.util.concurrent.LinkedBlockingQueue;

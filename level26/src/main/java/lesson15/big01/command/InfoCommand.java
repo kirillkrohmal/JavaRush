@@ -2,6 +2,10 @@ package lesson15.big01.command;
 
 import java.util.Collection;
 import java.util.ResourceBundle;
+import lesson15.big01.CashMachine;
+import lesson15.big01.ConsoleHelper;
+import lesson15.big01.CurrencyManipulator;
+import lesson15.big01.CurrencyManipulatorFactory;
 
 class InfoCommand implements Command {
     private ResourceBundle res = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "info_en");

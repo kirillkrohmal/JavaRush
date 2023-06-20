@@ -39,7 +39,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-
         Thread thread2 = threads.get(1);
         thread2.start();
         sleep();
@@ -55,47 +54,70 @@ public class Solution {
     }
 
     public static class FirstThread extends Thread {
+        @Override
+        public void run() {
+            while (true) {
 
-
+            }
+        }
     }
 
     public static class SecondThread extends Thread {
+        @Override
+        public void run() {
+            try {
+                while(!isInterrupted()) {
 
-
+                }
+                throw new InterruptedException();
+            } catch (InterruptedException e) {
+                System.out.println("InterruptedException");
+            }
+        }
     }
 
     public static class ThirdThread extends Thread {
-
-
+        @Override
+        public void run() {
+            try {
+                System.out.println("Ура");
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public static class FourthThread extends Thread implements Message {
-
-
         @Override
         public void showWarning() {
+            this.interrupt();
 
+            while(!isInterrupted()) {
+            }
+        }
+
+        @Override
+        public void run() {
+            Thread t = Thread.currentThread();
+
+            try {
+                t.interrupt();
+                join();
+            } catch (InterruptedException e) {
+
+            }
         }
     }
 
     public static class FivethThread extends Thread {
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         @Override
         public void run() {
             int sum = 0;
             try {
-                while (!isInterrupted()) {
-                    String s = reader.readLine();
-                    try {
-                        Integer i = Integer.parseInt(s);
-                        sum += i;
-                    } catch (Exception e2) {
-                        if ("N".equals(s)) break;
-                    }
-                }
-                System.out.println(sum);
+
             } catch (Exception e) {
             }
         }

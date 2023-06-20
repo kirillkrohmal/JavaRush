@@ -29,7 +29,7 @@ public class Solution {
 
     public Object get(Object key) { // получаем объект
         int hash = hash(key); // получаем хэш
-        synchronized (locks[hash % NUMBER_LOCKS]) {
+        {
             for (Node m = buckets[hash]; m != null; m = m.next) { // от козина[хэш] пока не null
                 if (m.key.equals(key)) return m.value; // если ключ равен объекту, возвращаем значение
             }
@@ -39,7 +39,7 @@ public class Solution {
 
     public void clear() { // очищаем объект
         for (int i = 0; i < buckets.length; i++) { // от 0 до размера корзины
-            synchronized (locks[i % NUMBER_LOCKS]) { // синхронизируем -
+            { // синхронизируем -
                 buckets[i] = null; // очищаем - присваеваем null ячейке i
             }
         }

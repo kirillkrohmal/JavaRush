@@ -16,19 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Solution {
     public static void main(String[] args) throws InterruptedException {
         //Add your code here
-        final ExecutorService service = Executors.newFixedThreadPool(5);
-        final AtomicInteger a = new AtomicInteger(1);
-        for (int i = 1; i <= 10; i++) {
-            a.set(i);
-            service.submit(new Runnable() {
-                @Override
-                public void run() {
-                    doExpensiveOperation(a.get());
-                }
-            });
-        }
-        service.shutdown();
-        service.awaitTermination(5, TimeUnit.SECONDS);
+
 
         /* output example
 pool-1-thread-2, localId=2

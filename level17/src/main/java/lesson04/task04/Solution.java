@@ -11,12 +11,17 @@ public class Solution {
         private static OurPresident president;
 
         private OurPresident() {
+
         }
 
         static {
-            president = new OurPresident();
+            synchronized (OurPresident.class) {
+                president = new OurPresident();
+            }
         }
-        public static OurPresident getOurPresident() {
+
+
+        public OurPresident getOurPresident() {
             return president;
         }
     }

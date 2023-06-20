@@ -3,6 +3,7 @@ package lesson10.task01;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalTime;
 
 /* Считаем секунды
 1. Напиши реализацию метода run в нити Stopwatch (секундомер).
@@ -29,15 +30,17 @@ public class Solution {
         private int seconds;
 
         public void run() {
+            Thread current = Thread.currentThread();
             try {
                 //add your code here - добавьте код тут
-                while (!currentThread().isInterrupted()) {
+                while(!current.isInterrupted()) {
+                    seconds += 1;
                     Thread.sleep(1000);
-                    seconds++;
                 }
-            } catch (InterruptedException e) {
+            } catch (Exception e) {
                 System.out.println(seconds);
             }
         }
     }
 }
+

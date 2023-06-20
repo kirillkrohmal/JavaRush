@@ -15,7 +15,9 @@ import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
-        NoteThread n = new NoteThread();
+        new NoteThread().start();
+        new NoteThread().start();
+
     }
 
     public static class Note {
@@ -38,12 +40,21 @@ public class Solution {
 
     public static class NoteThread extends Thread {
         int index;
+        @Override
         public String toString() {
             return getName() + "-Note" + index;
         }
+
+        @Override
         public void run() {
-            for (index = 0; index < 1000; index++) {
+            for (int index = 0; index < 1000; index++) {
                 Note.addNote(toString());
+
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 Note.removeNote(getName());
             }
         }

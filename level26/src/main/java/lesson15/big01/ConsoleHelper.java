@@ -1,6 +1,7 @@
 package lesson15.big01;
 
-import exception.InterruptOperationException;
+
+import lesson15.big01.exception.InterruptOperationException;
 
 import java.io.BufferedReader;
 import java.io.IOException;

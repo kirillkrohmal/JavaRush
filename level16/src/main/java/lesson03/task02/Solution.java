@@ -8,10 +8,18 @@ package lesson03.task02;
 
 public class Solution {
     public static void main(String[] args) {
-        TestThread thread = new TestThread();
+        TestThread testThread = new TestThread();
+        Thread thread = new Thread(testThread);
         thread.start();
     }
     public static class TestThread extends Thread {
 
+        static {
+            System.out.println("it's static block inside TestThread");
+        }
+        @Override
+        public void run() {
+            System.out.println("it's run method");
+        }
     }
 }

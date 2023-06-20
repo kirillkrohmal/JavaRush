@@ -11,11 +11,11 @@ public class Solution {
     public static class IntegerHolder {
         int integerHolder;
 
-        public synchronized int get() {
+        public int get() {
             return integerHolder;
         }
 
-        public synchronized void set(int integerHolder) {
+        public void set(int integerHolder) {
             this.integerHolder = integerHolder;
         }
     }

@@ -8,25 +8,23 @@ import java.util.List;
 */
 
 public class Solution {
-    public static volatile List<Thread> list = new ArrayList<Thread>(5);
-
+    public static volatile List<Thread> list = new ArrayList<>(5);
     public static void main(String[] args) {
         //Add your code here - добавьте свой код тут
-        SpecialThread a = new SpecialThread();
-        Thread thread1 = new Thread(a);
-        list.add(thread1);
-        SpecialThread b = new SpecialThread();
-        Thread thread2 = new Thread(b);
-        list.add(thread2);
-        SpecialThread c = new SpecialThread();
-        Thread thread3 = new Thread(c);
-        list.add(thread3);
-        SpecialThread d = new SpecialThread();
-        Thread thread4 = new Thread(d);
-        list.add(thread4);
-        SpecialThread e = new SpecialThread();
-        Thread thread5 = new Thread(e);
-        list.add(thread5);
+        SpecialThread st1 = new SpecialThread();
+        SpecialThread st2 = new SpecialThread();
+        SpecialThread st3 = new SpecialThread();
+        SpecialThread st4 = new SpecialThread();
+        SpecialThread st5 = new SpecialThread();
+
+        list.add(new Thread(st1));
+        list.add(new Thread(st2));
+        list.add(new Thread(st3));
+        list.add(new Thread(st4));
+        list.add(new Thread(st5));
+
+        System.out.println(list);
+
     }
 
     public static class SpecialThread implements Runnable {

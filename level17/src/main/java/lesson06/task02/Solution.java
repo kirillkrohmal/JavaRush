@@ -17,7 +17,7 @@ public class Solution {
         public void run() {
             int thisProposal = proposal;
 
-            while(proposal < 10) {
+            while (proposal < 10) {
                 System.out.println("Сделано предложение №" + (thisProposal + 1));
                 proposal = ++thisProposal;
                 try {
@@ -26,53 +26,22 @@ public class Solution {
                     e.getStackTrace();
                 }
             }
-        }
-    }
-
-    private static class AcceptProposal extends Thread{
-        @Override
-        public void run() {
-            int thisProposal = proposal;
-
-            while(proposal < 10){
-                if ( thisProposal != proposal)
-                System.out.println("Принято предложение №" + proposal);
-                thisProposal = proposal;
 
         }
     }
 
-
-
-
-    /*public static class MakeProposal extends Thread {
+    private static class AcceptProposal extends Thread {
         @Override
         public void run() {
             int thisProposal = proposal;
 
             while (proposal < 10) {
-                System.out.println("Сделано предложение №" + (thisProposal + 1));
-                proposal = ++thisProposal;
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                if (thisProposal != proposal)
+                    System.out.println("Принято предложение №" + proposal);
+                    thisProposal = proposal;
             }
         }
     }
+}
 
-    public static class AcceptProposal extends Thread {
-        @Override
-        public void run() {
-            int thisProposal = proposal;
-
-            while (thisProposal < 10) {
-                if (thisProposal != proposal) {
-                    System.out.println("Принято предложение №" + proposal);
-                    thisProposal = proposal;
-                }
-            }*/
-        }
-    }
 

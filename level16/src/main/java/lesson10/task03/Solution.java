@@ -9,17 +9,21 @@ public class Solution {
     public static void main(String[] args) throws InterruptedException {
         //Add your code here - добавь код тут
         TestThread testThread = new TestThread();
-        Thread thread = new Thread(testThread);
-        thread.start();
-        thread.interrupt();
+        testThread.start();
+        Thread.sleep(1000);
+        testThread.interrupt();
     }
 
     //Add your code below - добавь код ниже
     public static class TestThread extends Thread {
         @Override
-        public void run()
-        {
-
+        public void run() {
+            while (true) {
+                System.out.println("I'am Thread second");
+                if(isInterrupted()) {
+                    break;
+                }
+            }
         }
     }
 }

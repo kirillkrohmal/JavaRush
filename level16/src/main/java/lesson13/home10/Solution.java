@@ -22,15 +22,12 @@ public class Solution {
     public static String firstFileName;
     public static String secondFileName;
     static {
-        try
-        {
+        try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             firstFileName = reader.readLine();
             secondFileName = reader.readLine();
             reader.close();
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -47,24 +44,22 @@ public class Solution {
         System.out.println(f.getFileContent());
     }
 
-    public static interface ReadFileInterface extends Runnable{
-
-        void setFileName(String fullFileName);
+    public static interface ReadFileInterface extends Runnable {
+        void setFileName(String fileName);
 
         String getFileContent();
 
+        void start();
+
         void join() throws InterruptedException;
 
-        void start();
     }
     static class ReadFileThread extends Thread implements ReadFileInterface {
 
-        @Override
         public void setFileName(String fullFileName) {
             firstFileName = fullFileName;
         }
 
-        @Override
         public String getFileContent() {
             String fileContent = "";
             try {

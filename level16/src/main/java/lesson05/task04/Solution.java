@@ -10,8 +10,10 @@ package lesson05.task04;
 public class Solution {
     public static void main(String[] args) throws InterruptedException {
         Mouse alpha = new Mouse("#1");
+        alpha.join();
         Mouse mouse1 = new Mouse("#2");
         Mouse mouse2 = new Mouse("#3");
+
     }
 
     public static class Mouse extends Thread {

@@ -21,13 +21,13 @@ public class Solution {
 
         @Override
         public void run() {
-            synchronized (Person.class)
-            {
+            synchronized (Person.class) {
                 Iron iron = takeIron();
                 Clothes clothes = takeClothes();
                 ironing(iron, clothes);
                 returnIron();
             }
+
         }
 
         protected Iron takeIron() {

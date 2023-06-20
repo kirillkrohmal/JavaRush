@@ -71,5 +71,11 @@ public class BaseObject {
         //do nothing
     }
 
-
+    public boolean isIntersec(BaseObject o) {
+        double dx = x - o.x;
+        double dy = y - o.y;
+        double destination = Math.sqrt(dx * dx + dy * dy);
+        double destination2 = Math.max(radius, o.radius);
+        return destination <= destination2;
+    }
 }

@@ -24,8 +24,8 @@ public class Solution {
     }
     public static void ourInterruptMethod() {
         //add your code here - добавь код тут
-        for (int i = 0; i < threads.size(); i++) {
-            threads.get(i).interrupt();
+        for (Thread thread : threads) {
+            thread.interrupt();
         }
     }
 
@@ -55,7 +55,6 @@ public class Solution {
 
             try {
                 while (!isCurrentThreadInterrupted) {
-
                     System.out.println("Объект " + commonResource + ", нить " + threadName);
                     Thread.sleep(1000);
                 }

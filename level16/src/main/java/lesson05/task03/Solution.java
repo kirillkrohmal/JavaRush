@@ -17,12 +17,14 @@ public class Solution {
         Politic petrov = new Politic("Петров");
         Politic sidorov = new Politic("Сидоров");
 
-        while (ivanov.getCountSpeaches() + petrov.getCountSpeaches() + sidorov.getCountSpeaches() < totalCountSpeeches) {
-        }
+        while (ivanov.getCountSpeaches() + petrov.getCountSpeaches()
+                + sidorov.getCountSpeaches() < totalCountSpeeches) {
 
-        System.out.println(ivanov);
-        System.out.println(petrov);
-        System.out.println(sidorov);
+
+        }
+        System.out.println(ivanov.toString());
+        System.out.println(petrov.toString());
+        System.out.println(sidorov.toString());
     }
 
     public static class Politic extends Thread {

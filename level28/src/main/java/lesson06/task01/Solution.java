@@ -1,5 +1,6 @@
 package lesson06.task01;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ThreadLocalRandom;
@@ -15,7 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Solution {
     public static void main(String[] args) throws InterruptedException {
         Solution solution = new Solution();
-        List<String> list = new CopyOnWriteArrayList<>()
+        List<String> list = null;
 
         /* create object of this magic class here*/;
 

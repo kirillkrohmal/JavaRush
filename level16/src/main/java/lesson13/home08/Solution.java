@@ -30,10 +30,6 @@ public class Solution {
         ReaderThread consolReader2 = new ReaderThread();
         ReaderThread consolReader3 = new ReaderThread();
 
-        consolReader1.start();
-        consolReader2.start();
-        consolReader3.start();
-
         while (count > countReadStrings.get()) {
         }
 
@@ -50,21 +46,24 @@ public class Solution {
     public static class ReaderThread extends Thread {
         private List<String> result = new ArrayList<String>();
 
+        public ReaderThread() {
+            start();
+        }
+
         public void run() {
             try{
-                while (!isInterrupted()){
-                    while (reader.ready()){
-                        result.add(reader.readLine());
-                        countReadStrings.incrementAndGet();
-                    }
+                while (!isInterrupted()) {
+                    result.add(reader.readLine());
+                    countReadStrings.incrementAndGet();
                 }
 
-            }catch (Exception e){}
+            } catch (Exception e){}
         }
 
         @Override
         public String toString() {
-            return result.toString();
+            String s = result.toString();
+            return s.substring(1, s.length()-1);
         }
     }
 }

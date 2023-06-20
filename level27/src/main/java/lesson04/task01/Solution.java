@@ -15,12 +15,12 @@ public class Solution {
         return field;
     }
 
-    public synchronized void sout(Solution solution) {
+    public void sout(Solution solution) {
         System.out.format("111:  %s: %s %n", this.field, solution.getField());
         solution.sout2(this);
     }
 
-    public synchronized void sout2(Solution solution) {
+    public void sout2(Solution solution) {
         System.out.format("222:  %s: %s %n", this.field, solution.getField());
         solution.sout(this);
     }

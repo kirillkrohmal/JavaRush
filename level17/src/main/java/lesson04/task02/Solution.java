@@ -14,7 +14,7 @@ public class Solution {
 
         public synchronized void addNote(int index, String note) {
             System.out.println("Сейчас будет добавлена заметка [" + note + "] На позицию " + index);
-            notes.add(index, note);
+            notes.add(note);
             System.out.println("Уже добавлена заметка [" + note + "]");
         }
 

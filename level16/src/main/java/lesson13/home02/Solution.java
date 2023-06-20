@@ -18,12 +18,13 @@ public class Solution {
     public volatile static int COUNT = 4;
 
     public static void main(String[] args) throws InterruptedException {
-        for (int i = 0; i < COUNT; i++) {
+        //напишите тут ваш код
+        for (int j = 0; j < COUNT; j++) {
             Thread thread = new SleepingThread();
-            //напишите тут ваш код
             thread.join();
         }
     }
+
 
     public static class SleepingThread extends Thread {
         private volatile int countDownIndex = COUNT;
@@ -35,19 +36,19 @@ public class Solution {
         }
 
         public void run() {
-                try
+            try
+            {
+                while (true)
                 {
-                    while (true)
-                    {
-                        System.out.println(this);
-                        if (--countDownIndex == 0) return;
-                        //add sleep here - добавь sleep тут
-                        Thread.sleep(10);
-                    }
+                    System.out.println(this);
+                    if (--countDownIndex == 0) return;
+                    //add sleep here - добавь sleep тут
+                    Thread.sleep(10);
                 }
-                catch (InterruptedException e) {
-                    System.out.println("Нить прервана");
-                }
+            }
+            catch (InterruptedException e) {
+                System.out.println("Нить прервана");
+            }
 
         }
 

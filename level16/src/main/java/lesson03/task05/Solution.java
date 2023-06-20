@@ -1,5 +1,6 @@
 package lesson03.task05;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /* Поговорим о музыке?
@@ -19,13 +20,12 @@ public class Solution {
 
     public static class Violin implements MusicalInstrument {
         private String owner;
-
         public Violin(String owner) {
             this.owner = owner;
         }
 
         public Date startPlaying() {
-            System.out.println(this.owner + " starts playing");
+            System.out.println(owner + " starts playing");
             return new Date();
         }
 
@@ -36,11 +36,10 @@ public class Solution {
 
         @Override
         public void run() {
-            startPlaying();
+            Date start = startPlaying();
             sleepNSeconds(1);
-            stopPlaying();
-            System.out.println("Playing " + delay + " ms");
-
+            Date end = stopPlaying();
+            System.out.println("Playing " + (end.getTime() - start.getTime()) + " ms");
         }
     }
 
@@ -50,7 +49,7 @@ public class Solution {
         try {
             Thread.sleep(n * delay);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 

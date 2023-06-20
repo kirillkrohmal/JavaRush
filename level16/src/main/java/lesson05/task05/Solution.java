@@ -14,6 +14,7 @@ public class Solution {
     public static void main(String[] args) throws InterruptedException {
         Cat cat1 = new Cat("Мурка");
         Cat cat2 = new Cat("Пушинка");
+
     }
 
     public static class Cat extends Thread {
@@ -31,6 +32,8 @@ public class Solution {
             System.out.println(getName() + " родила 2 котенка");
             try {
                 initAllKitten();
+                kitten1.join();
+                kitten2.join();
             } catch (InterruptedException e) {
             }
             System.out.println(getName() + ": Все котята в корзинке. " + getName() + " собрала их назад");
@@ -38,9 +41,7 @@ public class Solution {
 
         private void initAllKitten() throws InterruptedException {
             kitten1.start();
-            kitten1.join();
             kitten2.start();
-            kitten2.join();
         }
     }
 
@@ -56,12 +57,9 @@ public class Solution {
     }
 
     private static void investigateWorld() {
-        try
-        {
+        try {
             Thread.sleep(200);
-        }
-        catch (InterruptedException e)
-        {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

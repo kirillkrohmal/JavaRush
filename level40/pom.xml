@@ -13,6 +13,15 @@
     <groupId>com.javarush</groupId>
     <artifactId>level40</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.3</version>
+        </dependency>
+
+    </dependencies>
 
     
 </project>

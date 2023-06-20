@@ -11,14 +11,14 @@ getRandomLongBetween0AndN должен возвращать случайный l
 */
 public class Solution {
     public static int getRandomIntegerBetweenNumbers(int from, int to) {
-        return ThreadLocalRandom.current().nextInt(from, to);
+        return 0;
     }
 
     public static double getRandomDouble() {
-        return ThreadLocalRandom.current().nextDouble();
+        return 0;
     }
 
     public static long getRandomLongBetween0AndN(long n) {
-        return ThreadLocalRandom.current().nextLong(n);
+        return 0;
     }
 }

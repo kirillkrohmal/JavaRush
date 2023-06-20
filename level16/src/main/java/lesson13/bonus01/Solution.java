@@ -1,9 +1,6 @@
 package lesson13.bonus01;
 
 
-import lesson13.bonus01.common.ImageReader;
-import lesson13.bonus01.common.ImageTypes;
-
 /* Factory method pattern
 1. Внимательно посмотри, какие классы у тебя есть.
 2. В отдельных файлах в пакете common создай классы JpgReader, PngReader, BmpReader, которые
@@ -18,6 +15,6 @@ import lesson13.bonus01.common.ImageTypes;
 
 public class Solution {
     public static void main(String[] args) {
-        ImageReader reader = ImageReaderFactory.getReader(ImageTypes.BMP);
+
     }
 }

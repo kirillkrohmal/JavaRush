@@ -50,7 +50,7 @@ public class Solution {
         @Override
         public void run() {
             do {
-                synchronized (this) {
+                synchronized (Counter.class) {
                     incrementCount();
                     values[getCount()]++;
                 }

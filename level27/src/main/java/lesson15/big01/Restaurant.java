@@ -1,8 +1,10 @@
 package lesson15.big01;
 
-import com.javarush.test.level27.lesson15.big01.kitchen.Cook;
-import com.javarush.test.level27.lesson15.big01.kitchen.Order;
-import com.javarush.test.level27.lesson15.big01.kitchen.Waitor;
+
+
+import lesson15.big01.kitchen.Cook;
+import lesson15.big01.kitchen.Order;
+import lesson15.big01.kitchen.Waitor;
 
 import java.util.ArrayList;
 import java.util.List;

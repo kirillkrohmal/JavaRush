@@ -45,7 +45,7 @@ public class Solution {
     }
 
     public static class RethrowableTask implements Runnable {
-        private volatile Throwable throwable;
+        private Throwable throwable;
         private Runnable runnable;
 
         public RethrowableTask(Runnable runnable) {

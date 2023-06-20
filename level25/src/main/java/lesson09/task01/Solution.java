@@ -10,20 +10,10 @@ package lesson09.task01;
 */
 public class Solution extends Thread {
     public Solution() {
-        this.setUncaughtExceptionHandler(new UncaughtExceptionHandler()
-        {
+        this.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
             @Override
-            public void uncaughtException(Thread t, Throwable e)
-            {
-                if (e instanceof Error) {
-                    System.out.println("Нельзя дальше работать");
-                }
-                else if (e instanceof Exception) {
-                    System.out.println("Надо обработать");
-                }
-                else {
-                    System.out.println("ХЗ");
-                }
+            public void uncaughtException(Thread t, Throwable e) {
+
             }
         });
     }

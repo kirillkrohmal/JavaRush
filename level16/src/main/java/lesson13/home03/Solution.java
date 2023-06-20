@@ -31,13 +31,16 @@ public class Solution {
 
         @Override
         public void run() {
-            if (countCreatedThreads < Solution.count) {
-                System.out.println(new GenerateThread());
+            while (countCreatedThreads < Solution.count) {
+                GenerateThread t = new GenerateThread();
+                System.out.println(t);
+
             }
         }
 
+        @Override
         public String toString() {
-            return this.getName() + "created";
+            return this.getName() + " created";
         }
     }
 }

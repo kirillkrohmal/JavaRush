@@ -1,8 +1,10 @@
 package lesson15.big01;
 
-import com.javarush.test.level27.lesson15.big01.ad.Advertisement;
-import com.javarush.test.level27.lesson15.big01.ad.StatisticAdvertisementManager;
-import com.javarush.test.level27.lesson15.big01.statistic.StatisticEventManager;
+
+
+import lesson15.big01.ad.Advertisement;
+import lesson15.big01.ad.StatisticAdvertisementManager;
+import lesson15.big01.statistic.StatisticEventManager;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

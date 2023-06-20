@@ -1,8 +1,10 @@
 package lesson15.big01.kitchen;
 
-import com.javarush.test.level27.lesson15.big01.ConsoleHelper;
-import com.javarush.test.level27.lesson15.big01.statistic.StatisticEventManager;
-import com.javarush.test.level27.lesson15.big01.statistic.event.CookedOrderEventDataRow;
+
+
+import lesson15.big01.ConsoleHelper;
+import lesson15.big01.statistic.StatisticEventManager;
+import lesson15.big01.statistic.event.CookedOrderEventDataRow;
 
 import java.util.Observable;
 import java.util.concurrent.LinkedBlockingQueue;
