@@ -13,12 +13,13 @@ public class Person implements Runnable {
         try {
             Thread.sleep(1000);
             //сделайте что-то тут - do something here
-            synchronized (mail)
-            {
+            synchronized (mail) {
                 mail.setText("Person [" + name + "] has written an email 'AAA'");
                 //сделайте что-то тут - do something here
                 mail.notify();
             }
+
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

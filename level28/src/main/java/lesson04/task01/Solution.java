@@ -23,7 +23,6 @@ firstGroup-pool-1-thread-2
 secondGroup-pool-2-thread-2
 */
 public class Solution {
-
     public static void main(String[] args) {
         class EmulateThreadFactoryTask implements Runnable {
             @Override
@@ -56,17 +55,23 @@ public class Solution {
     }
 
     public static class AmigoThreadFactory implements ThreadFactory {
-
+        static final AtomicInteger poolNumber = new AtomicInteger(1);
+        final ThreadGroup threadGroup;
+        final AtomicInteger threadNumber = new AtomicInteger(1);
+        final String namePrefix;
 
         AmigoThreadFactory() {
             SecurityManager s = System.getSecurityManager();
-
+            threadGroup = (s != null) ? s.getThreadGroup() : Thread.currentThread().getThreadGroup();
+            namePrefix = threadGroup.getName() + "-pool-" + poolNumber.getAndIncrement() + "-thread-";
         }
+
         @Override
         public Thread newThread(Runnable r) {
-
-
-            return null;
+            Thread t = new Thread(threadGroup, r, namePrefix + threadNumber.incrementAndGet(), 0);
+            if(t.isDaemon()) t.setDaemon(false);
+            if(t.getPriority() != Thread.NORM_PRIORITY) t.setPriority(Thread.NORM_PRIORITY);
+            return t;
         }
     }
 }

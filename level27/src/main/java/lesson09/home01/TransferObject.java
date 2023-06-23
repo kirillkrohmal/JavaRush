@@ -6,8 +6,7 @@ public class TransferObject {
     private int value;
     protected volatile boolean isValuePresent = false; //use this variable
 
-    public synchronized int get() throws InterruptedException
-    {
+    public synchronized int get() throws InterruptedException {
         if (!isValuePresent) {
             this.wait();
         }
@@ -17,8 +16,7 @@ public class TransferObject {
         return value;
     }
 
-    public synchronized void put(int value) throws InterruptedException
-    {
+    public synchronized void put(int value) throws InterruptedException {
         if (isValuePresent) {
             this.wait();
         }

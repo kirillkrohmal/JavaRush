@@ -14,8 +14,22 @@ import java.util.concurrent.atomic.AtomicInteger;
 Не должно быть комментариев кроме приведенного output example
 */
 public class Solution {
+    private static volatile int id = 1;
     public static void main(String[] args) throws InterruptedException {
         //Add your code here
+        final ExecutorService service = Executors.newFixedThreadPool(5);
+
+        for (int i = 1; i <= 10; i++) {
+            service.execute(new Runnable() {
+                @Override
+                public void run() {
+                    doExpensiveOperation(id++);
+                }
+            });
+        }
+        service.shutdown();
+        service.awaitTermination(5, TimeUnit.SECONDS);
+    }
 
 
         /* output example
@@ -30,9 +44,9 @@ pool-1-thread-2, localId=6
 pool-1-thread-1, localId=10
 pool-1-thread-3, localId=8
          */
-    }
+
 
     private static void doExpensiveOperation(int localId) {
-        System.out.println(Thread.currentThread().getName() + ", localId="+localId);
+        System.out.println(Thread.currentThread().getName() + ", localId=" + localId);
     }
 }

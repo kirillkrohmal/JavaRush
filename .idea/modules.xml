@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/level26/level26.iml" filepath="$PROJECT_DIR$/level26/level26.iml" />
       <module fileurl="file://$PROJECT_DIR$/level28/level28.iml" filepath="$PROJECT_DIR$/level28/level28.iml" />
+      <module fileurl="file://$PROJECT_DIR$/level39/level39.iml" filepath="$PROJECT_DIR$/level39/level39.iml" />
       <module fileurl="file://$PROJECT_DIR$/level40/level40.iml" filepath="$PROJECT_DIR$/level40/level40.iml" />
     </modules>
   </component>

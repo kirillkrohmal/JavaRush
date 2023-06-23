@@ -1,5 +1,7 @@
 package lesson09.task01;
 
+import java.util.Objects;
+
 /* Поживем - увидим
 Все исключения, которые возникают в процессе работы нити Solution, должны быть обработаны одним из
 вариантов:
@@ -13,7 +15,13 @@ public class Solution extends Thread {
         this.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
             @Override
             public void uncaughtException(Thread t, Throwable e) {
-
+                if (e instanceof Error) {
+                    System.out.println("Нельзя дальше работать");
+                } else if (e instanceof Exception) {
+                    System.out.println("Надо обработать");
+                } else {
+                    System.out.println("ХЗ");
+                }
             }
         });
     }

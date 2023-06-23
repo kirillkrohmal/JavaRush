@@ -1,5 +1,7 @@
 package lesson05.task02;
 
+import java.util.logging.Logger;
+
 /* Без дураков
 1. Создай private class MyUncaughtExceptionHandler, который на перехват исключения должен подождать
 половину секунды, а затем вывести на экран secretKey, имя трэда и сообщение возникшего исключения.
@@ -26,14 +28,21 @@ public class Solution {
 
         @Override
         public void run() {
-
+            throw new NullPointerException("it's an example");
         }
-        private class MyUncaughtExceptionHandler implements UncaughtExceptionHandler {
-
+        private class MyUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler {
             @Override
             public void uncaughtException(Thread t, Throwable e) {
+                try {
+                    Thread.sleep(500);
 
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
+                System.out.println(String.format("%s, %s, %s" + secretKey, t.getName(), e));
+                e.printStackTrace();
             }
+
         }
     }
 }

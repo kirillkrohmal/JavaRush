@@ -31,6 +31,26 @@ public class Solution {
     private static boolean isEveryoneReady = false;
 
     private static void start(List<Character> characters) throws InterruptedException {
+        final Phaser phaser = new Phaser(characters.size());
 
+        for (final Character character : characters) {
+            final String m = character.toString();
+            System.out.println(m + " присоединился к игре");
+
+            new Thread() {
+                @Override
+                public void run() {
+                    System.out.println(m + " готовится к игре");
+                    phaser.arriveAndAwaitAdvance();
+
+                    if (!isEveryoneReady) {
+                        isEveryoneReady = true;
+                        System.out.println("Игра началась!");
+                    }
+                    character.run();
+                }
+            }.start();
+        }
+        phaser.arriveAndDeregister();
     }
 }

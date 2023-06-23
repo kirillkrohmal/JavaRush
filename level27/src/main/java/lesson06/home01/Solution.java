@@ -34,10 +34,13 @@ public class Solution {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
+
                     for (int i = 0; i < apartments.length; i++) {
                         apartments[i].revalidate(true);
                     }
+
                 }
+
             }, "ApartmentThread" + i).start();
         }
 

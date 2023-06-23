@@ -16,7 +16,18 @@ java.lang.Exception: ABC
 public class Solution implements Thread.UncaughtExceptionHandler {
     @Override
     public void uncaughtException(Thread t, Throwable e) {
+        t.interrupt();
+        List<Throwable> throwables = new ArrayList<>();
+        Throwable throwable = e;
 
+        while(throwable != null) {
+            throwables.add(0, throwable);
+            throwable = throwable.getCause();
+        }
+
+        for (Throwable th : throwables) {
+            System.out.println(th);
+        }
     }
 
     public static void main(String[] args){

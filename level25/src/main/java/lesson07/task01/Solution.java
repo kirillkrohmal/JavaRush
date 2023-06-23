@@ -21,8 +21,13 @@ public class Solution extends Thread {
 
     public void interrupt() {
         //implement logic here
-
-
+        try {
+            socket.close();
+            in.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Thread.interrupted();
     }
 
     public void run() {
@@ -39,10 +44,10 @@ public class Solution extends Thread {
                     }
                 }
             }
-        } catch (IOException ignored) {}
-        finally
-        {
+        } catch (IOException ignored) {
 
+        } finally {
+            super.interrupt();
         }
     }
 }

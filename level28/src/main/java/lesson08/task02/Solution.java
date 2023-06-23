@@ -1,9 +1,8 @@
 package lesson08.task02;
 
 
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.Queue;
+import java.util.concurrent.*;
 
 /* Знакомство с ThreadPoolExecutor
 1. В методе main создай очередь LinkedBlockingQueue<Runnable>
@@ -21,8 +20,28 @@ import java.util.concurrent.TimeUnit;
 Не должно быть комментариев кроме приведенного output example
 */
 public class Solution {
+    private static volatile int id = 1;
     public static void main(String[] args) throws InterruptedException {
         //Add your code here
+        BlockingQueue<Runnable> queue = new LinkedBlockingQueue<>();
+
+        for (int i = 1; i < 10; i++) {
+            Runnable runnable = new Runnable() {
+                @Override
+                public void run() {
+                    doExpensiveOperation(id++);
+                }
+
+            };
+            queue.put(runnable);
+        }
+        ThreadPoolExecutor tpe = new ThreadPoolExecutor(3, 5,
+                1000, TimeUnit.MILLISECONDS, queue);
+        tpe.prestartAllCoreThreads();
+        tpe.shutdown();
+        tpe.awaitTermination(5, TimeUnit.SECONDS);
+
+
 
         /* output example
 pool-1-thread-2, localId=2
